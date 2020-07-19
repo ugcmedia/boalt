@@ -619,13 +619,13 @@
     font-size: 40px !important;
   }
 }
-// @media(max-width: 500px){
-//   .container{
-//     border: 1px black solid;
-//     width: 100vw !important;
-//     margin: 0 !important;
-//   }
-// }
+@media(max-width: 500px){
+  .container{
+    border: 1px black solid;
+    width: 100vw !important;
+    margin: 0 !important;
+  }
+}
 
 
 
