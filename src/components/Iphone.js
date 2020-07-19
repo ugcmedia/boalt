@@ -75,9 +75,9 @@ class Iphone extends React.Component {
                         alt="iPhone Rare"
                         className="iphone-rare"
                       />
-                      {/* <div className="toggle-line" onClick={this.handle}>
+                      <div className="toggle-line" onClick={this.handle}>
                         <div className={btn_class} onClick={this.handle}></div>
-                      </div> */}
+                      </div>
                     </div>
                   </div>
                 </Col>
