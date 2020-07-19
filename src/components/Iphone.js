@@ -34,18 +34,18 @@ class Iphone extends React.Component {
             <div>
               <Row>
                 <Col lg="6">
-                  {/* <div className="iphone-title-part">
+                  <div className="iphone-title-part">
                     <span className="iphone-title">
-                    <p >iPhone</p>
+                      <p >iPhone</p>
                     </span>
                     <span className="iphone-title-sub">
-                    <p >The Ultimate iPhone</p>
+                      <p >The Ultimate iPhone</p>
                     </span>
                     <span className="iphone-title-description">
-                    <p > The future is here. Join the iPhone Upgrade Program to get the
+                      <p > The future is here. Join the iPhone Upgrade Program to get the
                       latest iPhone - NOW!</p>
                     </span>
-                  </div> */}
+                  </div>
                 </Col>
                 {/* <Col lg="6">
                 <div className="iphone-image-part">
