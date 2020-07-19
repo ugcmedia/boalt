@@ -39,16 +39,16 @@ class SignInForm extends Component {
       }
     };
   }
-//   componentDidMount() {
-//     let token = localStorage.getItem("apple-token");
-//     if (token && token != null) {
-//       this.props.history.push("/home");
-//     }
-//     let err = this.props.location.search;
-//     if (err.includes(403)) {
-//       this.setState({ signin: "Login to Continue!!" });
-//     }
-//   }
+  componentDidMount() {
+    let token = localStorage.getItem("apple-token");
+    if (token && token != null) {
+      this.props.history.push("/prehome");
+    }
+    let err = this.props.location.search;
+    if (err.includes(403)) {
+      this.setState({ signin: "Login to Continue!!" });
+    }
+  }
 
   render() {
     return (
