@@ -1,0 +1,107 @@
+.sign-in-up-page {
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent linear-gradient(180deg, #5ac8fa 0%, #ffffff00 100%) 0%
+    0% no-repeat padding-box;
+  opacity: 1;
+}
+.login-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  width: 480px;
+  height: 420px;
+  background: #ffffff;
+  .login-form {
+    padding: 2rem;
+    .title {
+      margin-top: 10px;
+      margin-bottom: 0px;
+      text-align: center;
+      font-family: poppins;
+      font-weight: 900;
+    }
+    .error-top-container {
+      text-align: center;
+      min-height: 30px;
+      .error-top {
+        color: red;
+        margin-top: -20px;
+        font-family: poppins;
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+    .field-label {
+      display: block;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-family: poppins;
+      font-weight: 500;
+    }
+    #email,
+    #password {
+      width: 100%;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      outline: none;
+      border: 1px lightgrey solid;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      font-family: poppins;
+    }
+    .error-container {
+      min-height: 30px;
+      .error {
+        color: red;
+        margin-top: -20px;
+        font-family: poppins;
+        font-weight: 400;
+        font-size: 12px;
+      }
+    }
+    .sign-in {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      margin-top: 1.3rem;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0.7rem 3rem;
+      background-color: black;
+      color: white;
+      outline: none;
+      border: none;
+      border-radius: 3px;
+      font-family: poppins;
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+  .sign-up {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 12px;
+    font-family: poppins;
+    font-weight: bolder;
+    .sign-up-link {
+      text-decoration: none;
+    }
+  }
+}
+@media(max-width: 520px){
+  .login-card{
+    width: 320px;
+    height: 400px;
+  }
+}
+
+
+
+
+
+
