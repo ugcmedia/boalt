@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, withRouter } from "react-router-dom";
-import logo from "../assets/images/AppleLogo.png";
+import logo from "../images/AppleLogo.png";
 
 class Navbar extends React.Component {
   constructor(props) {
