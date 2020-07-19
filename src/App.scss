@@ -1,3 +1,5 @@
+// App view Sass
+
 .sign-in-up-page {
   top: 0px;
   left: 0px;
@@ -10,12 +12,25 @@
     0% no-repeat padding-box;
   opacity: 1;
 }
+
+// Login Sass
+
+
 .login-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   width: 480px;
   height: 420px;
   background: #ffffff;
+  .signing-in{
+    margin-top: 160px;
+    margin-left: 205px;
+  }
+  .loader{
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: 50px;
+  }
   .login-form {
     padding: 2rem;
     .title {
@@ -94,12 +109,23 @@
   }
 }
 
+// SignUp Sass
+
 .signup-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   width: 480px;
   height: 480px;
   background: #ffffff;
+  .signing-up{
+    margin-top: 200px;
+    margin-left: 205px;
+  }
+  .loader{
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: 50px;
+  }
   .signup-form {
     padding: 2rem;
     .signup-title {
@@ -167,6 +193,8 @@
   }
 }
 
+// PreHome Page Sass
+
 .pre-home{
   .pre-nav {
     text-align: center;
@@ -231,6 +259,8 @@
     }
   }
 }
+
+// HomePage Sass
 
 .home {
   position: absolute;
@@ -299,6 +329,7 @@
   }
 }
 
+// Navbar Sass
 
 .nav {
   height: 100px;
@@ -375,6 +406,8 @@
   content: none;
 }
 
+// Icons Sass
+
 .vertical-icons {
   position: absolute;
   right: 0;
@@ -400,6 +433,151 @@
     height: 30px;
   }
 }
+
+
+// iPhone Page Sass
+
+
+.container {
+  margin: 0px 102px;
+}
+.iphone-title-part {
+  position: absolute;
+  top: 100px;
+  width: 45%;
+  height: 60vh;
+  background: transparent linear-gradient(90deg, #f2f2f2 0%, #ffffff00 100%) 0%
+    0% no-repeat padding-box;
+  opacity: 1;
+}
+.iphone-title {
+  position: absolute;
+  margin-top: 10%;
+  margin-left: 8%;
+  font-family: poppins;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #ff3b30;
+  opacity: 1;
+}
+.iphone-title-sub {
+  margin-top: 20%;
+  margin-left: 8%;
+  margin-bottom: 0px;
+  width: 674px;
+  font-family: poppins;
+  font-size: 100px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  line-height: 100px;
+}
+.iphone-title-description {
+  margin-top: 5%;
+  margin-left: 8%;
+  width: 612px;
+  font-family: poppins;
+  font-size: 25px;
+  letter-spacing: 0px;
+  color: #999999;
+  opacity: 1;
+}
+.iphone-image-part {
+  position: absolute;
+  text-align: center;
+  top: 100px;
+  left: 50%;
+  margin-left: 8rem;
+  width: 45%;
+  height: 90vh;
+}
+.iphone-image {
+  margin-top: 10%;
+  width: 431px;
+  height: 729px;
+}
+.bottom-part {
+  position: absolute;
+  margin-top: 102px;
+  margin-left: 102px;
+  top: 60vh;
+  width: 50vw;
+  height: 30vh;
+}
+.inline {
+  display: inline-flex;
+}
+.price-tag {
+  margin-top: 150px;
+  margin-left: 80px;
+  width: 289px;
+  height: 56px;
+  font-family: poppins;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #cccccc;
+}
+.buy-now {
+  margin-top: 10px;
+  margin-left: 80px;
+  width: 103px;
+  height: 28px;
+  font-family: poppins;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  color: #ff3b30;
+  opacity: 1;
+}
+.iphone-front {
+  position: absolute;
+  margin-left: calc(50vw - 300px);
+  margin-top: 40px;
+  width: 103px;
+  height: 206px;
+  cursor: pointer;
+}
+.iphone-rare {
+  margin-left: calc(50vw - 520px);
+  margin-top: 40px;
+  top: 769px;
+  left: 968px;
+  width: 103px;
+  height: 206px;
+  cursor: pointer;
+}
+.toggle-line {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: calc(50vw - 275px);
+  width: 200px;
+  height: 9px;
+  background: #f2f2f2 0% 0% no-repeat padding-box;
+  opacity: 1;
+  cursor: pointer;
+}
+.default-btn {
+  width: 100px;
+  height: 9px;
+  background: #ff3b30 0% 0% no-repeat padding-box;
+  opacity: 1;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.clicked-btn {
+  margin-left: 100px;
+  width: 100px;
+  height: 9px;
+  background: #ff3b30 0% 0% no-repeat padding-box;
+  opacity: 1;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+
 
 
 
