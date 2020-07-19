@@ -29,7 +29,7 @@ class Iphone extends React.Component {
     return (
       <div>
         <Navbar />
-        <div className="container">
+        <div className="iphone-page-container">
           <div className="iphone-title-part">
             <p className="iphone-title">iPhone</p>
             <p className="iphone-title-sub">The Ultimate iPhone</p>
