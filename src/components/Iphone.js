@@ -1,4 +1,5 @@
 import React from "react";
+import { Container, Row, Col } from 'reactstrap';
 import Navbar from "./Navbar";
 import Icons from "./Icons";
 import iPhoneFront from "../images/iphone1.png";
@@ -29,43 +30,9 @@ class Iphone extends React.Component {
     return (
       <div>
         <Navbar />
-        <div className="iphone-page-container">
-          <div className="iphone-title-part">
-            <p className="iphone-title">iPhone</p>
-            <p className="iphone-title-sub">The Ultimate iPhone</p>
-            <p className="iphone-title-description">
-              The future is here. Join the iPhone Upgrade Program to get the
-              latest iPhone - NOW!
-            </p>
-          </div>
-          <div className="iphone-image-part">
-            <img src={iphone_image} alt="iPhone" className="iphone-image" />
-          </div>
-          <Icons />
-        </div>
-        <div className="bottom-part">
-          <div className="inline">
-            <div>
-              <div className="price-tag">From $699</div>
-              <div className="buy-now">Buy Now ></div>
-            </div>
-            <img
-              onClick={this.clickedFront}
-              src={iPhoneFrontThumbnail}
-              alt="iPhone Front"
-              className="iphone-front"
-            />
-            <img
-              onClick={this.clickedBack}
-              src={iPhoneRareThumbnail}
-              alt="iPhone Rare"
-              className="iphone-rare"
-            />
-          </div>
-          <div className="toggle-line" onClick={this.handle}>
-            <div className={btn_class} onClick={this.handle}></div>
-          </div>
-        </div>
+          <Container >
+            
+        </Container>
       </div>
     );
   }
