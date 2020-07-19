@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
-// import logo from "../assets/images/AppleLogo.png";
-// import apple from "../assets/images/apple.png";
+import logo from "../assets/images/AppleLogo.png";
+import apple from "../assets/images/apple.png";
 import CountUp from "react-countup";
 
 class PreHome extends React.Component {
@@ -9,9 +9,9 @@ class PreHome extends React.Component {
     redirect: false,
   };
 
-  // componentDidMount() {
-  //   this.timeout = setTimeout(() => this.setState({ redirect: true }), 2000);
-  // }
+  componentDidMount() {
+    this.timeout = setTimeout(() => this.setState({ redirect: true }), 2000);
+  }
 
   render() {
     return this.state.redirect ? (
@@ -19,10 +19,10 @@ class PreHome extends React.Component {
     ) : (
       <div className="pre-home">
         <div className="pre-nav">
-          <img src="" className="pre-nav-logo" alt="logo" />>
+          <img src={logo} className="pre-nav-logo" alt="logo" />>
         </div>
         <div className="pre-home-page">
-          <img src="" alt="apple" className="pre-apple" />
+          <img src={apple} alt="apple" className="pre-apple" />
           <div className="counter">
             <CountUp
               className="year first-digit"
