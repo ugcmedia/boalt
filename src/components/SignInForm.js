@@ -11,6 +11,7 @@ class SignInForm extends Component {
         email: "",
         password: "",
       },
+      loader: false,
       errors: {}, //it will have errors if email or password invalid
       signin: "", //it will have sign in error if user is not authenticated
     };
@@ -27,10 +28,11 @@ class SignInForm extends Component {
         fields.email === "ugcmedia@gmail.com" &&
         fields.password === "123456"
       ) {
-        localStorage.setItem("apple-token", "thisisexampletoken");
+        localStorage.setItem("apple-token", "apple-store-token");
+        this.setState({loader: true})
         setTimeout(() => {
           this.props.history.push("/home");
-        }, 500);
+        }, 3000);
       } else {
         // else error will be shown at the top
         setTimeout(() => {
@@ -51,7 +53,14 @@ class SignInForm extends Component {
   }
 
   render() {
-    return (
+    return this.state.loader ? (
+      <div className="login-card">
+          <div className="signing-in">
+          <i className="fa fa-spinner fa-spin loader"></i>
+          <p>Signing in...</p>
+          </div>
+      </div>
+    ) : (
       <div>
         <div className="login-card">
           <div className="login-form">
