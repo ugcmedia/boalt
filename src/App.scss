@@ -581,7 +581,51 @@
   }
 }
 
+@media(max-width: 1450px){
+  .iphone-title-sub{
+    font-size: 60px !important;
+  }
+  .bottom-part{
+    margin-top: 15px !important;
+  }
+  .switch-part{
+    margin-top: 25px !important;
+  }
+}
 
+// @media(max-width: 1200px){
+//   .iphone-title-sub{
+//     font-size: 80px !important;
+//   }
+// }
+
+// @media(max-width: 850px){
+//   .bottom-part{
+//     display: block !important;
+//   }
+//   .switch-part{
+//     padding-left: 50px;
+//   }
+// }
+
+// @media(max-width: 815px){
+//   .iphone-title-sub{
+//     font-size: 60px !important;
+//   }
+// }
+
+// @media(max-width: 680px){
+//   .iphone-title-sub{
+//     font-size: 40px !important;
+//   }
+// }
+// @media(max-width: 500px){
+//   .container{
+//     border: 1px black solid;
+//     width: 100vw !important;
+//     margin: 0 !important;
+//   }
+// }
 
 
 
