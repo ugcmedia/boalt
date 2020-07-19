@@ -235,7 +235,7 @@
 .home {
   position: absolute;
   top: 100px;
-  margin: 0px 102px;
+  margin: 0px 100px;
   width: calc(100vw - 205px);
   height: calc(100vh - 110px);
   background: transparent linear-gradient(90deg, #f2f2f2 0%, #ffffff00 100%) 0%
@@ -298,6 +298,91 @@
     }
   }
 }
+
+
+.nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .nav-logo-container {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    text-align: center;
+    .nav-logo {
+      margin-top: 20px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .nav-links {
+    display: inline-flex;
+    .nav-link {
+      align-self: center;
+      justify-content: center;
+      // top: 40px;
+      width: auto;
+      font-family: poppins;
+      font-size: 20px;
+      letter-spacing: 0px;
+      color: #707070;
+      opacity: 1;
+      text-decoration: none;
+    }
+    .navbar-link-active {
+      font-weight: bolder;
+      color: black;
+    }
+    .iphone {
+      margin-left: calc(100vw - 900px);
+    }
+    .macbook {
+      margin-left: 40px;
+    }
+    .watch {
+      margin-left: 40px;
+    }
+    .notify {
+      padding: 4px 18px;
+      border-radius: 17px;
+      background-color: rgb(62, 180, 219);
+      color: white;
+      margin-left: 40px;
+    }
+    .sign-out-btn {
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-left: 30px;
+      border: none;
+      .svg {
+        position: absolute;
+        margin-top: -5px;
+        margin-left: -15px;
+        height: 40px;
+        width: 40px;
+        fill: red;
+      }
+      .sign-out-text {
+        margin-left: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.nav::before{
+  display: none;
+  content: none;
+}
+
+
+
+
+
+
+
+
+
 
 
 
