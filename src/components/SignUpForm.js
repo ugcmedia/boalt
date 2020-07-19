@@ -32,9 +32,9 @@ class SignUpForm extends Component {
       } else {
         this.setState({loader: true})
         setTimeout(() => {
+          alert("Signed Up Successfully");
           this.props.history.push("/home");
         }, 5000);
-        alert("Signed Up Successfully");
         this.setState({
           fields: {
             name: "",
@@ -49,7 +49,7 @@ class SignUpForm extends Component {
   render() {
     return this.state.loader ? (
       <div className="signup-card">
-          <div className="singing-up">
+          <div className="signing-up">
           <i className="fa fa-spinner fa-spin loader"></i>
           <p>Signing Up...</p>
           </div>
