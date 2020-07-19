@@ -9,7 +9,7 @@ import "./App.scss";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import PreHome from "./components/PreHome";
-// import Home from "./components/Home";
+import Home from "./components/Home";
 // import Iphone from "./components/Iphone";
 // import Macbook from "./components/Macbook";
 
@@ -32,12 +32,12 @@ function App() {
               isAuth() ? <PreHome /> : <Redirect to="/?error403" />
             }
           />
-          {/* <Route
+           <Route
             exact
             path="/home"
             render={() => (isAuth() ? <Home /> : <Redirect to="/?error403" />)}
           />
-          <Route
+         {/* <Route
             exact
             path="/iphone"
             render={() =>
