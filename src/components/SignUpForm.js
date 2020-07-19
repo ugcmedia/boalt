@@ -12,6 +12,7 @@ class SignUpForm extends Component {
         email: "",
         password: "",
       },
+      loader: false,
       errors: {}, //it will have errors if email or password invalid
       signup: "",
     };
@@ -29,6 +30,10 @@ class SignUpForm extends Component {
           signup: "password must be equal to or greater than 6 characters",
         });
       } else {
+        this.setState({loader: true})
+        setTimeout(() => {
+          this.props.history.push("/home");
+        }, 5000);
         alert("Signed Up Successfully");
         this.setState({
           fields: {
@@ -42,7 +47,14 @@ class SignUpForm extends Component {
   }
 
   render() {
-    return (
+    return this.state.loader ? (
+      <div className="signup-card">
+          <div className="singing-up">
+          <i className="fa fa-spinner fa-spin loader"></i>
+          <p>Signing Up...</p>
+          </div>
+      </div>
+    ) : (
       <div>
         <div className="signup-card">
           <div className="signup-form">
