@@ -62,7 +62,7 @@ class Iphone extends React.Component {
                       <p className="price-tag">From $699</p>
                       <p className="buy-now">Buy Now</p>
                     </div>
-                    {/* <div className="switch-part">
+                    <div className="switch-part">
                       <img
                         onClick={this.clickedFront}
                         src={iPhoneFrontThumbnail}
@@ -75,10 +75,10 @@ class Iphone extends React.Component {
                         alt="iPhone Rare"
                         className="iphone-rare"
                       />
-                      <div className="toggle-line" onClick={this.handle}>
+                      {/* <div className="toggle-line" onClick={this.handle}>
                         <div className={btn_class} onClick={this.handle}></div>
-                      </div>
-                    </div> */}
+                      </div> */}
+                    </div>
                   </div>
                 </Col>
               </Row> 
