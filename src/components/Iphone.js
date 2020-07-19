@@ -47,11 +47,11 @@ class Iphone extends React.Component {
                     </span>
                   </div>
                 </Col>
-                {/* <Col lg="6">
+                <Col lg="6">
                 <div className="iphone-image-part">
                   <img src={iphone_image} alt="iPhone" className="iphone-image" />
                 </div>
-                </Col> */}
+                </Col>
               </Row>
             </div>
             {/* <div>
