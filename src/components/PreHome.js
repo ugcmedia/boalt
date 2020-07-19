@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
-import logo from "../assets/images/AppleLogo.png";
-import apple from "../assets/images/apple.png";
+import logo from "../images/AppleLogo.png";
+import apple from "../images/apple.png";
 import CountUp from "react-countup";
 
 class PreHome extends React.Component {
