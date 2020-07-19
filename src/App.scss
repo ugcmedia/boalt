@@ -507,7 +507,17 @@
   .switch-part{
     margin-top: -80px;
     padding-bottom: 15px;
-
+    .iphone-front {
+      width: 103px;
+      height: 206px;
+      cursor: pointer;
+    }
+    .iphone-rare {
+      margin-left: 80px;
+      width: 103px;
+      height: 206px;
+      cursor: pointer;
+    }
 
   }
 }
