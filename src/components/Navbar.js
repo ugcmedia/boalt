@@ -97,7 +97,9 @@ class Navbar extends React.Component {
             </span>
             
           </NavLink>
-
+          <NavLink to="#" className="nav-link notify">
+            Notify me
+          </NavLink>
 
           <div className="nav-link sign-out-btn">
             <svg
