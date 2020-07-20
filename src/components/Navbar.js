@@ -78,15 +78,27 @@ class Navbar extends React.Component {
             
           </NavLink>
           <NavLink
-            to="#"
+            to="#"  
             className="nav-link"
             activeClassName="navbar-link-active"
           >
-             <span className="nav-text notify">
+            <span className="nav-text notify">
              Notify me
             </span>
             <span className="nav-icon">
-            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell" class="svg-inline--fa fa-bell fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"></path></svg>
+            <svg width="37px" height="37px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xlink">
+                <title>bell</title>
+                <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                    <g id="page-1" transform="translate(-107.000000, -357.000000)">
+                        <g id="bell" transform="translate(107.000000, 357.000000)">
+                            <circle id="Oval" fill="#5AC8FA" cx="23" cy="23" r="23"></circle>
+                            <g id="bell-solid" transform="translate(11.000000, 9.000000)" fill="#FFFFFF" fillRule="nonzero">
+                                <path d="M12,28 C13.8921313,28 15.4269434,26.4332031 15.4269434,24.5 L8.57305658,24.5 C8.57305658,26.4332031 10.1078687,28 12,28 Z M23.5386797,19.8127344 C22.503686,18.6774219 20.5670907,16.9695312 20.5670907,11.375 C20.5670907,7.12578125 17.648537,3.72421875 13.7132039,2.8896875 L13.7132039,1.75 C13.7132039,0.783671875 12.9460657,0 12,0 C11.0539343,0 10.2867961,0.783671875 10.2867961,1.75 L10.2867961,2.8896875 C6.35146297,3.72421875 3.43290931,7.12578125 3.43290931,11.375 C3.43290931,16.9695313 1.49631396,18.6774219 0.461320261,19.8127344 C0.139893646,20.1654687 -0.002605486,20.5871094 3.60306952e-05,21 C0.00596589038,21.896875 0.695425978,22.75 1.71970546,22.75 L22.2802945,22.75 C23.304574,22.75 23.9945698,21.896875 23.999964,21 C24.0026055,20.5871094 23.8601064,20.1649219 23.5386797,19.8127344 L23.5386797,19.8127344 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
             </span>
           </NavLink>
           <div className="nav-link sign-out-btn">
