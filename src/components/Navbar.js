@@ -1,16 +1,6 @@
 import React from "react";
 import { NavLink, withRouter } from "react-router-dom";
 
-const NavLinks = (props) => {
-  if (props.small) {
-      return <p>This text is displayed</p>
-  }else{
-    return
-  }
-}
-
-
-
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
