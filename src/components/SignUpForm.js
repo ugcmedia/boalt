@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-// import "../css/SignUpForm.css";
-import { Link } from "react-router-dom";
+import { Link, withRouter} from "react-router-dom";
 import ReactFormInputValidation from "react-form-input-validation";
 
 class SignUpForm extends Component {
@@ -30,11 +29,11 @@ class SignUpForm extends Component {
           signup: "password must be equal to or greater than 6 characters",
         });
       } else {
+        localStorage.setItem("apple-token", "apple-store-token");
         this.setState({loader: true})
         setTimeout(() => {
-          alert("Signed Up Successfully");
-          this.props.history.push("/home");
-        }, 5000);
+          this.props.history.push("/prehome");
+        }, 4000);
         this.setState({
           fields: {
             name: "",
@@ -129,4 +128,4 @@ class SignUpForm extends Component {
   }
 }
 
-export default SignUpForm;
+export default withRouter(SignUpForm);
