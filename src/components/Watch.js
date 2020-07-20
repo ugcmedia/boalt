@@ -50,8 +50,8 @@ class Iphone extends React.Component {
                   </div>
                 </Col>
                 <Col lg="6">
-                <div className="iphone-image-part">
-                  <img src={iphone_image} alt="iPhone" className="iphone-image" />
+                <div className="watch-image-part">
+                  <img src={iphone_image} alt="iPhone" className="watch-image" />
                 </div>
                 </Col>
               </Row>
