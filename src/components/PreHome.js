@@ -1,6 +1,5 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
-import logo from "../images/AppleLogo.png";
 import apple from "../images/apple.png";
 import CountUp from "react-countup";
 
