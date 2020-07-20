@@ -232,7 +232,7 @@
       position: absolute;
       top: 85%;
       left: 50%;
-      width: 250px;
+      width: 280px;
       margin: 0 0 0 -110px;
       .year {
         height: 80px;
@@ -382,15 +382,12 @@
     .notify {
       padding: 4px 18px;
       border-radius: 17px;
-      background-color: rgb(62, 180, 219);
+      background-color: #5AC8FA;
       color: white;
       margin-left: 40px;
     }
     .sign-out-btn {
-      padding: 10px 20px;
-      border-radius: 5px;
       margin-left: 30px;
-      border: none;
       .svg {
         position: absolute;
         margin-top: -5px;
@@ -474,9 +471,9 @@
         letter-spacing: 0px;
         color: #000000;
         opacity: 1;
-        line-height: 80px;
+        // line-height: 80px;
         p{
-          margin-top: 20px;
+          // margin-top: 20px;
         }
       }
       .iphone-title-description {
@@ -487,7 +484,7 @@
         opacity: 1;
         p{
           width: 450px;
-          margin-top: 30px;
+          // margin-top: 30px;
         }
       }
       .background-logo{
@@ -851,8 +848,27 @@
   }
 }
 
+.holder{
+  display:inline-block;
+  height:100px;
+  width:auto;
+  text-align:center;
+  overflow:hidden;
+  background:#fff;
+  color:#000;
+  padding:0;
+}
 
-
+.digitHolder{
+  line-height:100px;
+  margin:0 8px 0 8px;
+  font-size:100px;
+  font-family:oswald;
+  -webkit-transition:margin-top 1s ease;
+  -moz-transition:margin-top 1s ease;
+  -o-transition:margin-top 1s ease;
+  transition:margin-top 1s ease;
+}
 
 
 
@@ -951,7 +967,7 @@
 @media only screen and (max-width: 800px) {
   .nav-links{
     display: flex !important;
-    width:  100% !important;
+    width:  100vw !important;
     justify-content: space-evenly;
     .nav-link{
       .nav-text{
@@ -960,10 +976,13 @@
       .nav-icon{
         display: block !important;
       }
+      .sign-out-btn {
+        margin-left: 0 !important;
+      }
       .svg{
-        position: relative !important;
-        margin: 0 !important;
-        padding: 0 !important;
+      position: relative !important;
+      margin: 0 !important;
+      padding: 0 !important;
       }
     }
   }
