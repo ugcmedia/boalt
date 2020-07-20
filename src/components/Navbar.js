@@ -80,6 +80,7 @@ class Navbar extends React.Component {
 
           <div className="nav-link sign-out-btn">
             <svg
+            onClick={this.handleSignOut}
               className="svg"
               xmlns="http://www.w3.org/2000/svg"
               height="24"
