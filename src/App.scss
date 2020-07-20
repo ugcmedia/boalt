@@ -842,25 +842,16 @@
       font-size: 45px !important;
     }
   }
-}
-
-@media only screen and (max-width: 1250px) {
-  .nav-links{
-    .nav-link{
-      .nav-text{
-        display: none !important;
-      }
-      .nav-icon{
-        display: block !important;
-      }
-    }
-  }
 
 }
 
-@media(max-width: 815px){
+
+@media(max-width: 915px){
   .iphone-title-sub{
     font-size: 60px !important;
+  }
+  .nav-link{
+    margin: 0px 10px !important;
   }
 }
 
