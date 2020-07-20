@@ -648,16 +648,6 @@
 
 
 
-@media(max-width: 520px){
-  .login-card{
-    width: 320px;
-    height: 400px;
-  }
-  .signup-card{
-    width: 320px;
-    height: 440px;
-  }
-}
 
 @media(max-width: 1450px){
   .iphone-title-sub,
@@ -721,6 +711,18 @@
   .mac .container{
     width: 100vw !important;
     margin: 0 !important;
+  }
+}
+
+
+@media(max-width: 520px){
+  .login-card{
+    width: 320px;
+    height: 400px;
+  }
+  .signup-card{
+    width: 320px;
+    height: 440px;
   }
 }
 
