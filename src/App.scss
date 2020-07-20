@@ -636,7 +636,7 @@
     margin: 0 100px !important;
     width: calc(100vw - 200px) !important;
     padding: 0 !important;
-    .iphone-title-part {
+    .watch-title-part {
       padding: 30px;
       padding-left: 50px;
         width: 100%;
@@ -644,7 +644,7 @@
       background: transparent linear-gradient(90deg, #f2f2f2 0%, #ffffff00 100%) 0%
         0% no-repeat padding-box;
       opacity: 1;
-      .iphone-title {
+      .watch-title {
         font-family: poppins;
         font-size: 32px;
         font-weight: bold;
@@ -652,7 +652,7 @@
         color: #ff3b30;
         opacity: 1;
       }
-      .iphone-title-sub {
+      .watch-title-sub {
         font-family: poppins;
         font-size: 80px;
         font-weight: bold;
@@ -660,11 +660,18 @@
         color: #000000;
         opacity: 1;
       }
-      .iphone-title-description {
+      .watch-title-description {
         font-family: poppins;
         font-size: 20px;
         letter-spacing: 0px;
         color: #999999;
+        opacity: 1;
+      }
+      .watch-shipping{
+        font-family: poppins;
+        font-size: 14px;
+        letter-spacing: 0px;
+        color: #FF3B30;
         opacity: 1;
       }
     }
