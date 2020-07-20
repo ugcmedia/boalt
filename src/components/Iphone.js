@@ -28,7 +28,7 @@ class Iphone extends React.Component {
     let btn_class = this.state.front ? "default-btn" : "clicked-btn";
     let iphone_image = this.state.front ? iPhoneFront : iPhoneRare;
     return (
-      <div>
+      <div className="iphone">
         <Navbar />
           <Container >
             <div>
