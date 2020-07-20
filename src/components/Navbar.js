@@ -21,18 +21,6 @@ class Navbar extends React.Component {
       this.props.history.push("/");
     };
   }
-  state = {
-    small: false,
-  };
-  componentDidMount() {
-    window.addEventListener('resize', ()=>{
-      console.log(typeof(window.innerHeight));
-      if(window.innerHeight < 720 ){
-      console.log(window.innerHeight);
-        this.setState({small: true})
-      }
-    });
-  }
 
   render() {
     return (
