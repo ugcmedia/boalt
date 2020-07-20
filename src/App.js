@@ -12,6 +12,7 @@ import PreHome from "./components/PreHome";
 import Home from "./components/Home";
 import Iphone from "./components/Iphone";
 import Macbook from "./components/Macbook";
+import Watch from "./components/Watch";
 
 function isAuth() {
   if (!localStorage.getItem("apple-token")) return false;
@@ -49,6 +50,13 @@ function App() {
             path="/macbook"
             render={() =>
               isAuth() ? <Macbook /> : <Redirect to="/?error403" />
+            }
+          />
+          <Route
+            exact
+            path="/watch"
+            render={() =>
+              isAuth() ? <Watch /> : <Redirect to="/?error403" />
             }
           />
         </Switch>
