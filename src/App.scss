@@ -684,6 +684,18 @@
   }
 }
 
+@media(max-width: 850px){
+  .bottom-part{
+    display: block !important;
+  }
+  .tech-detail{
+    display: block !important;
+    margin-left: 0px !important;
+  }
+  .switch-part{
+    padding-left: 50px;
+  }
+}
 
 
 
