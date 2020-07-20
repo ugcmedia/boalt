@@ -19,6 +19,7 @@ class Iphone extends React.Component {
   render() {
     let white_btn = this.state.white ? "active white-circle-container" : "white-circle-container";
     let black_btn = !this.state.white ? "active black-circle-container" : "black-circle-container";
+    let transition = this.state.white ? "watch-image fade-in" : "watch-image fade-out"
     let watch = this.state.white ? WhiteWatch : BlackWatch;
     return (
       <div className="watch">
@@ -45,7 +46,7 @@ class Iphone extends React.Component {
                 </Col>
                 <Col xs="12" lg="6">
                 <div className="watch-image-part">
-                  <img src={watch} alt="iPhone" className="watch-image" />
+                  <img src={watch} alt="iPhone" className={transition} />
                 </div>
                 <div className="switch-part">
                     <div className="toggle-btns">
