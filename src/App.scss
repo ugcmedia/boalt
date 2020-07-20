@@ -751,16 +751,6 @@
           margin-bottom: 20px;
         }
       }
-      .toggle- {
-        margin-left: 43px;
-        margin-top: 50px;
-        width: 200px;
-        height: 9px;
-        background: #f2f2f2 0% 0% no-repeat padding-box;
-        opacity: 1;
-        cursor: pointer;
-
-      }
     }
   }
 }
@@ -778,7 +768,13 @@
 
 
 
-
+@media(max-width: 1550px){
+  .watch{
+    .watch-title-sub{
+      font-size: 60px !important;
+    }
+  }
+}
 
 
 
@@ -793,14 +789,21 @@
   .tech-compute{
     font-size: 40px !important;
   }
-  .bottom-part{
-    margin-top: 15px !important;
-  }
-  .switch-part{
-    margin-top: 25px !important;
+  .iphone{
+    .bottom-part{
+      margin-top: 15px !important;
+    }
+    .switch-part{
+      margin-top: 25px !important;
+    }
   }
   .mac-image {
     height: 290px  !important;
+  }
+  .watch{
+    .watch-title-sub{
+      font-size: 55px !important;
+    }
   }
 }
 
@@ -815,15 +818,22 @@
 }
 
 @media(max-width: 850px){
-  .bottom-part{
-    display: block !important;
-  }
-  .switch-part{
-    padding-left: 50px;
+  .iphone{
+    .bottom-part{
+      display: block !important;
+    }
+    .switch-part{
+      padding-left: 50px;
+    }
   }
   .mac-image {
     width: 100% !important;
     height: 280px  !important;
+  }
+  .watch{
+    .watch-title-sub{
+      font-size: 45px !important;
+    }
   }
 }
 
@@ -864,8 +874,9 @@
     height: 440px;
   }
   .iphone .container,
-  .mac .container{
-    width: 100vw !important;
+  .mac .container,
+  .watch .container{
+    width: 100% !important;
     margin: 0 !important;
   }
   .mac-image {
@@ -873,6 +884,20 @@
   }
   .mac-title-part{
     padding-left: 50px !important;
+  }
+  .watch{
+    .watch-title{
+      font-size: 14px !important;
+    }
+    .watch-title-sub{
+      font-size: 35px !important;
+    }
+    .watch-title-description{
+      font-size: 13px !important;
+    }
+    .toggle-btns{
+
+    }
   }
 }
 
