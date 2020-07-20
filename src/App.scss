@@ -427,16 +427,22 @@
     margin-top: -20px;
     width: 40px;
     height: 40px;
+    opacity: 0.5;
   }
   .mac-icon-vertical {
     margin-top: 15px;
     width: 32px;
     height: 38px;
+    opacity: 0.5;
   }
   .watch-icon-vertical {
     margin-top: 20px;
     width: 25px;
     height: 30px;
+    opacity: 0.5;
+  }
+  .icon-active{
+    opacity: 1 !important;
   }
 }
 
