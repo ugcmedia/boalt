@@ -436,6 +436,8 @@
 
 
 // iPhone Page Sass
+
+
 .iphone{
   .container{
     margin: 0 100px !important;
@@ -627,6 +629,8 @@
 
 
 
+// Watch CSS
+
 
 
 
@@ -663,14 +667,18 @@
   .switch-part{
     margin-top: 25px !important;
   }
+  .mac-image {
+    height: 290px  !important;
+  }
 }
 
 @media(max-width: 1200px){
   .iphone-title-sub{
     font-size: 80px !important;
   }
-  .tech-detail{
-    margin-left: 20px !important;
+  .mac-image {
+    width: 70% !important;
+    height: 280px  !important;
   }
 }
 
@@ -678,12 +686,12 @@
   .bottom-part{
     display: block !important;
   }
-  .tech-detail{
-    display: block !important;
-    margin-left: 0px !important;
-  }
   .switch-part{
     padding-left: 50px;
+  }
+  .mac-image {
+    width: 100% !important;
+    height: 280px  !important;
   }
 }
 
@@ -700,21 +708,20 @@
   }
   .mac-desc{
     text-align: center;
-    // display: block !important;
   }
-  .tech-detail{
+  .mac-image {
+    height: 180px  !important;
+  }
+  .right-desc{
     margin-left: 0px !important;
   }
-}
-@media(max-width: 500px){
-  .iphone .container,
-  .mac .container{
-    width: 100vw !important;
-    margin: 0 !important;
+  .tech-compute{
+    font-size: 35px !important;
+  }
+  .mac-title-part{
+    padding-left: 30px !important;
   }
 }
-
-
 @media(max-width: 520px){
   .login-card{
     width: 320px;
@@ -724,8 +731,18 @@
     width: 320px;
     height: 440px;
   }
+  .iphone .container,
+  .mac .container{
+    width: 100vw !important;
+    margin: 0 !important;
+  }
+  .mac-image {
+    height: 250px  !important;
+  }
+  .mac-title-part{
+    padding-left: 50px !important;
+  }
 }
-
 
 
 
