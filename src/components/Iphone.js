@@ -11,22 +11,43 @@ class Iphone extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      clicked: false,
       front: true,
     };
   }
   handle = () => {
-    this.setState({ front: !this.state.front });
+    this.setState({ clicked: true });
+    setTimeout(()=>{
+      this.setState({ front: !this.state.front });
+      setTimeout(()=>{
+      this.setState({ clicked: false });
+      },900)
+    },500)
+    
   };
   clickedFront = () => {
-    this.setState({ front: true });
+    this.setState({ clicked: true });
+    setTimeout(()=>{
+      this.setState({ front: true });
+      setTimeout(()=>{
+      this.setState({ clicked: false });
+      },900)
+    },500)
   };
   clickedBack = () => {
-    this.setState({ front: false });
+    this.setState({ clicked: true });
+    setTimeout(()=>{
+      this.setState({ front: false });
+      setTimeout(()=>{
+      this.setState({ clicked: false });
+      },900)
+    },500)
   };
 
   render() {
     let btn_class = this.state.front ? "default-btn" : "clicked-btn";
     let iphone_image = this.state.front ? iPhoneFront : iPhoneRare;
+    let transition = this.state.front ? "iphone-image slide-in" : "iphone-image slide-in";
     return (
       <div className="iphone">
         <Navbar />
@@ -50,7 +71,15 @@ class Iphone extends React.Component {
                 </Col>
                 <Col lg="6">
                 <div className="iphone-image-part">
-                  <img src={iphone_image} alt="iPhone" className="iphone-image" />
+                  {
+                    this.state.clicked ? (
+<img src={iphone_image} alt="iPhone" className={transition} />
+                    ) : (
+<img src={iphone_image} alt="iPhone" className="iphone-image" />
+
+                    )
+                  }
+                  
                 </div>
                 </Col>
               </Row>
