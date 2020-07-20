@@ -28,23 +28,23 @@ class Iphone extends React.Component {
     let btn_class = this.state.front ? "default-btn" : "clicked-btn";
     let iphone_image = this.state.front ? iPhoneFront : iPhoneRare;
     return (
-      <div className="iphone">
+      <div className="watch">
         <Navbar />
           <Container >
             <div>
               <Row>
                 <Col lg="6">
-                  <div className="iphone-title-part">
-                    <span className="iphone-title">
+                  <div className="watch-title-part">
+                    <span className="watch-title">
                       <p >Apple Watch</p>
                     </span>
-                    <span className="iphone-title-sub">
+                    <span className="watch-title-sub">
                       <p >Change Starts Within.</p>
                     </span>
-                    <span className="iphone-title-description">
+                    <span className="watch-title-description">
                       <p > Apple Watch Series 4. Fundamentally redesigned and re‑engineered to help you be even more active, healthy, and connected.</p>
                     </span>
-                    <span className="iphone-shipping">
+                    <span className="watch-shipping">
                       <p >Starts Shipping MM-DD-YYYY</p>
                     </span>
                   </div>
