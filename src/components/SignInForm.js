@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import "../css/SignInForm.css";
 import { Link, withRouter } from "react-router-dom";
 import ReactFormInputValidation from "react-form-input-validation";
 
@@ -31,7 +30,7 @@ class SignInForm extends Component {
         localStorage.setItem("apple-token", "apple-store-token");
         this.setState({loader: true})
         setTimeout(() => {
-          this.props.history.push("/home");
+          this.props.history.push("/prehome");
         }, 3000);
       } else {
         // else error will be shown at the top
