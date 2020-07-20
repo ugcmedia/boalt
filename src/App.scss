@@ -845,6 +845,28 @@
 
 }
 
+@media only screen and (max-width: 800px) {
+  .nav-links{
+    display: flex !important;
+    width:  100% !important;
+    justify-content: space-evenly;
+    .nav-link{
+      .nav-text{
+        display: none !important;
+      }
+      .nav-icon{
+        display: block !important;
+      }
+      .svg{
+        position: relative !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+    }
+  }
+
+}
+
 
 @media(max-width: 915px){
   .iphone-title-sub{
