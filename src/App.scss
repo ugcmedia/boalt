@@ -360,6 +360,12 @@
       color: #707070;
       opacity: 1;
       text-decoration: none;
+      .nav-text{
+        display: block;
+      }
+      .nav-icon{
+        display: none;
+      }
     }
     .navbar-link-active {
       font-weight: bolder;
@@ -399,6 +405,7 @@
         cursor: pointer;
       }
     }
+
   }
 }
 .nav::before{
@@ -835,6 +842,20 @@
       font-size: 45px !important;
     }
   }
+}
+
+@media only screen and (max-width: 1250px) {
+  .nav-links{
+    .nav-link{
+      .nav-text{
+        display: none !important;
+      }
+      .nav-icon{
+        display: block !important;
+      }
+    }
+  }
+
 }
 
 @media(max-width: 815px){
