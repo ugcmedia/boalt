@@ -4,8 +4,8 @@ import Navbar from "./Navbar";
 import Icons from "./Icons";
 import iPhoneFront from "../images/iphone-front.jpg";
 import iPhoneRare from "../images/iphone-rear.jpg";
-import iPhoneFrontThumbnail from "../images/apple-iphonexs-max-gold.png";
-import iPhoneRareThumbnail from "../images/apple-iphonexs-max-gold-back-2.png";
+import iPhoneFrontThumbnail from "../images/iPhoneFrontThumbnail.png";
+import iPhoneRareThumbnail from "../images/iPhoneRareThumbnail.png";
 
 class Iphone extends React.Component {
   constructor(props) {
