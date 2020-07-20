@@ -1,62 +1,64 @@
 import React from "react";
+import { Container, Row, Col } from 'reactstrap';
 import Navbar from "./Navbar";
 import Icons from "./Icons";
 import Mac from "../images/laptop.png";
-import AppleProducts from "../images/shutterstock_-2.png";
+
 
 const Macbook = () => {
   return (
-    <div>
+    <div className="mac">
       <Navbar />
-      <Icons />
-      <div className="container">
-        <div className="macbook-title-part">
-          <div className="macbook-title">MacBook Pro</div>
-          <div className="macbook-title-sub">More Power. More Pro</div>
+        <Container >
           <div>
-            <p className="inline macbook-specs">8-Core</p>
-            <p className="inline macbook-specs">32GB</p>
-          </div>
-          <div>
-            <p className="inline macbook-specs-description">Intel processor</p>
-            <p className="inline macbook-specs-description">Memory</p>
-          </div>
-          <img src={Mac} alt="MacBook Pro" className="macbook-pro-image" />
-        </div>
-        <div className="bottom-part-mac">
-          <div className="inline">
-            <div className="buy-now-mac-container">
-              <p className="buy-now-mac">Buy Now ></p>
-            </div>
-            <div className="apple-products">
-              <img
-                src={AppleProducts}
-                alt="Apple Products"
-                className="apple-products-image"
-              />
-            </div>
-            <div className="subscription-form">
-              <div>
-                <label htmlFor="sub_email" className="subscribe-now">
-                  Subscribe Now
-                </label>
+            <Row>
+              <Col lg="12">
+                <div className="inner-container">
+                <Row>
+                  <Col lg="6">
+                      <div className="mac-title-part">
+                      <span className="mac-title">
+                        <p >MacBook Pro</p>
+                      </span>
+                      <span className="mac-title-sub">
+                        <p >More Power. More Pro</p>
+                      </span>
+                      <span className="mac-title-description">
+                        <div className="mac-desc">
+                          <div>
+                            <p className="tech-compute">
+                              8-Core
+                            </p>
+                            <p className="tech-detail">
+                              Intel Processor
+                            </p>
+                          </div>
+                          <div className="right-desc">
+                            <p className="tech-compute">
+                              32GB
+                            </p>
+                            <p className="tech-detail">
+                              Memory
+                            </p>
+                          </div>
+                        </div>
+                      </span>
+                    </div>
+                      </Col>
+                      <Col className="col" lg="6">
+                      <div className="mac-image-part">
+                        <img src={Mac} alt="iPhone" className="mac-image" />
+                      </div>
+                      </Col>
+                    </Row>
+                  </div>
+                
+
+                  </Col>
+                  
+                </Row>
               </div>
-              <input
-                id="sub_email"
-                name="email"
-                type="text"
-                placeholder="Enter the email address."
-                className="subscription-email-input"
-              />
-              <input
-                type="submit"
-                value="Subscribe"
-                className="subscription-button"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      </Container>
     </div>
   );
 };
