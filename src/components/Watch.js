@@ -4,8 +4,6 @@ import Navbar from "./Navbar";
 import Icons from "./Icons";
 import WhiteWatch from "../images/white-watch.png";
 import BlackWatch from "../images/black-watch.png";
-import iPhoneFrontThumbnail from "../images/apple-iphonexs-max-gold.png";
-import iPhoneRareThumbnail from "../images/apple-iphonexs-max-gold-back-2.png";
 
 class Iphone extends React.Component {
   constructor(props) {
@@ -25,6 +23,7 @@ class Iphone extends React.Component {
     return (
       <div className="watch">
         <Navbar />
+        <Icons/>
           <Container >
             <div>
               <Row>
