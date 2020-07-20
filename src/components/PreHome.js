@@ -1,24 +1,70 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect,withRouter } from "react-router-dom";
 import apple from "../images/apple.png";
-import CountUp from "react-countup";
 
 class PreHome extends React.Component {
-  state = {
-    redirect: false,
-  };
+  constructor(props){
+    super(props);
+    this.state = {
+      redirect: false,
+      holder: [],
+      number: ""
+    };
+  }
+
+  goHome(){
+    // console.log("click");
+  }
+  randomize(){
+    var randomm=Math.floor(Math.random()*9999);
+    var num;
+    if(randomm===0 ){num="0000"}
+    else if(randomm<10  ){num="000"+randomm;}
+    else if(randomm<100 ){num="00"+randomm;}
+    else if(randomm<1000){num="0"+randomm;}
+    else{num=randomm}
+    this.setState({ number: num }, () => {
+      this.sliceNum();
+    }); 
+  }
+  sliceNum(){
+    let array = [];
+    for(var i=0;i<4;i++){
+      let value= this.state.number.toString().slice(i,i+1);
+      array.push(value)
+    }
+    this.setState({ holder: [...this.state.holder, array] }, () => {
+      this.turnTheSlot();
+    })
+  }
+  reset(){
+     this.setState({ holder: []});
+   }
+  turnTheSlot(){
+    for(var i=0; i<4; i++){
+      var value = this.state.holder[i];
+      console.log((this.state.holder[i]));
+      var margin= 100 * value;
+      // $("#"+i+"").css("margin-top","-"+margin+"px");
+    }
+  }
+
+  go(){
+    this.randomize()
+    // this.turnTheSlot();
+    // this.reset();
+  }
 
   componentDidMount() {
-    this.timeout = setTimeout(() => this.setState({ redirect: true }), 2000);
+    this.go()
   }
 
   render() {
     return this.state.redirect ? (
       <Redirect to="/home" />
     ) : (
-      <div className="pre-home">
+      <div className="pre-home" onClick={this.goHome()}>
         <div className="pre-nav">
-
         <svg className="pre-nav-logo" xmlns="http://www.w3.org/2000/svg" width="31.961" height="39.205" viewBox="0 0 31.961 39.205">
   <g id="Group_3" data-name="Group 3" transform="translate(256 -1333)">
     <g id="Group_1" data-name="Group 1" transform="translate(-256 1333)">
@@ -27,15 +73,36 @@ class PreHome extends React.Component {
     </g>
   </g>
 </svg>
-
         </div>
         <div className="pre-home-page">
-          <img src={apple} alt="apple" className="pre-apple" />
+          <img onClick={this.goHome()} src={apple} alt="apple" className="pre-apple" />
           <div className="counter">
-            <CountUp
+            <div>
+              <div className="holder">
+                <div className="digitHolder" id="1">
+                  0<br/>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9
+                </div>
+              </div>
+              <div className="holder">
+                <div className="digitHolder" id="2">
+                  0<br/>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9
+                </div>
+              </div>
+              <div className="holder">
+                <div className="digitHolder" id="3">
+                  0<br/>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9
+                </div>
+              </div>
+              <div className="holder">
+                <div className="digitHolder" id="4">
+                  0<br/>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9
+                </div>
+              </div>
+            </div>
+            {/* <CountUp
               className="year first-digit"
               duration={3}
-              start={0}
+              start={1}
               separator=" "
               end={2}
             />
@@ -48,18 +115,18 @@ class PreHome extends React.Component {
             />
             <CountUp
               className="year third-digit"
-              duration={2}
+              duration={3}
               start={30}
               separator=" "
               end={1}
             />
             <CountUp
               className="year fourth-digit"
-              duration={2}
+              duration={3}
               start={50}
               separator=" "
               end={9}
-            />
+            /> */}
           </div>
         </div>
       </div>
@@ -67,4 +134,4 @@ class PreHome extends React.Component {
   }
 }
 
-export default PreHome;
+export default withRouter(PreHome);
