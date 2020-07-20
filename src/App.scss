@@ -631,7 +631,118 @@
 
 // Watch CSS
 
-
+.watch{
+  .container{
+    margin: 0 100px !important;
+    width: calc(100vw - 200px) !important;
+    padding: 0 !important;
+    .iphone-title-part {
+      padding: 30px;
+      padding-left: 50px;
+        width: 100%;
+      height: 60vh;
+      background: transparent linear-gradient(90deg, #f2f2f2 0%, #ffffff00 100%) 0%
+        0% no-repeat padding-box;
+      opacity: 1;
+      .iphone-title {
+        font-family: poppins;
+        font-size: 32px;
+        font-weight: bold;
+        letter-spacing: 0px;
+        color: #ff3b30;
+        opacity: 1;
+      }
+      .iphone-title-sub {
+        font-family: poppins;
+        font-size: 80px;
+        font-weight: bold;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+      }
+      .iphone-title-description {
+        font-family: poppins;
+        font-size: 20px;
+        letter-spacing: 0px;
+        color: #999999;
+        opacity: 1;
+      }
+    }
+    .iphone-image-part {
+      text-align: center;
+      margin-top: 25px;
+      .iphone-image {
+        width: 240px;
+        height: 420px;
+      }
+    }
+    .bottom-part {
+      padding-right: 30px;
+      display: flex;
+      justify-content: space-between;
+      .price-tag {
+        margin-top: 30px;
+        margin-left: 50px;
+        font-family: poppins;
+        font-size: 50px;
+        font-weight: bold;
+        letter-spacing: 0px;
+        color: #cccccc;
+      }
+      .buy-now {
+        margin-top: 5px;
+        margin-left: 50px;
+        font-family: poppins;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0px;
+        color: #ff3b30;
+        opacity: 1;
+      }
+    }
+    .switch-part{
+      margin-top: -80px;
+      padding-bottom: 15px;
+      .iphone-front {
+        width: 103px;
+        height: 206px;
+        cursor: pointer;
+      }
+      .iphone-rare {
+        margin-left: 80px;
+        width: 103px;
+        height: 206px;
+        cursor: pointer;
+      }
+      .toggle-line {
+        margin-left: 43px;
+        margin-top: 50px;
+        width: 200px;
+        height: 9px;
+        background: #f2f2f2 0% 0% no-repeat padding-box;
+        opacity: 1;
+        cursor: pointer;
+        .default-btn {
+          width: 100px;
+          height: 9px;
+          background: #ff3b30 0% 0% no-repeat padding-box;
+          opacity: 1;
+          cursor: pointer;
+          margin-bottom: 20px;
+        }
+        .clicked-btn {
+          margin-left: 100px;
+          width: 100px;
+          height: 9px;
+          background: #ff3b30 0% 0% no-repeat padding-box;
+          opacity: 1;
+          cursor: pointer;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
 
 
 
