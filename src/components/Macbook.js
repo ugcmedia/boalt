@@ -9,6 +9,7 @@ const Macbook = () => {
   return (
     <div className="mac">
       <Navbar />
+      <Icons/>
         <Container >
           <div>
             <Row>
