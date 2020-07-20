@@ -1,5 +1,6 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
+import logo from "../images/AppleLogo.png";
 import apple from "../images/apple.png";
 import CountUp from "react-countup";
 
@@ -19,7 +20,7 @@ class PreHome extends React.Component {
       <div className="pre-home">
         <div className="pre-nav">
 
-        <svg xmlns="http://www.w3.org/2000/svg" width="31.961" height="39.205" viewBox="0 0 31.961 39.205">
+        <svg className="pre-nav-logo" xmlns="http://www.w3.org/2000/svg" width="31.961" height="39.205" viewBox="0 0 31.961 39.205">
   <g id="Group_3" data-name="Group 3" transform="translate(256 -1333)">
     <g id="Group_1" data-name="Group 1" transform="translate(-256 1333)">
       <path id="Path_1" data-name="Path 1" d="M298.635,121.217a8.391,8.391,0,0,1,6.157-3.412,8.372,8.372,0,0,1-2.026,6.267c-2.732,3.283-5.838,2.746-5.838,2.746A7.281,7.281,0,0,1,298.635,121.217Z" transform="translate(-281 -117.805)" fill="#fff" fill-rule="evenodd"/>
