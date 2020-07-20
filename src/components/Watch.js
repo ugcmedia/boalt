@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Row, Col } from 'reactstrap';
 import Navbar from "./Navbar";
 import Icons from "./Icons";
-import iPhoneFront from "../images/iphone1.png";
-import iPhoneRare from "../images/iphone4.png";
+import WhiteWatch from "../images/white-watch.png";
+import BlackWatch from "../images/black-watch.png";
 import iPhoneFrontThumbnail from "../images/apple-iphonexs-max-gold.png";
 import iPhoneRareThumbnail from "../images/apple-iphonexs-max-gold-back-2.png";
 
@@ -11,29 +11,24 @@ class Iphone extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      front: true,
+      white: true,
     };
   }
   handle = () => {
-    this.setState({ front: !this.state.front });
-  };
-  clickedFront = () => {
-    this.setState({ front: true });
-  };
-  clickedBack = () => {
-    this.setState({ front: false });
+    this.setState({ white: !this.state.white });
   };
 
   render() {
-    let btn_class = this.state.front ? "default-btn" : "clicked-btn";
-    let iphone_image = this.state.front ? iPhoneFront : iPhoneRare;
+    let white_btn = this.state.white ? "active white-circle-container" : "white-circle-container";
+    let black_btn = !this.state.white ? "active black-circle-container" : "black-circle-container";
+    let watch = this.state.white ? WhiteWatch : BlackWatch;
     return (
       <div className="watch">
         <Navbar />
           <Container >
             <div>
               <Row>
-                <Col lg="6">
+                <Col xs="12" lg="6">
                   <div className="watch-title-part">
                     <span className="watch-title">
                       <p >Apple Watch</p>
@@ -49,38 +44,31 @@ class Iphone extends React.Component {
                     </span>
                   </div>
                 </Col>
-                <Col lg="6">
+                <Col xs="12" lg="6">
                 <div className="watch-image-part">
-                  <img src={iphone_image} alt="iPhone" className="watch-image" />
+                  <img src={watch} alt="iPhone" className="watch-image" />
+                </div>
+                <div className="switch-part">
+                    <div className="toggle-btns">
+                        <div className={white_btn}  onClick={this.handle}>
+                            <div className="white-circle">
+                            </div>
+                        </div>
+                        <div className={black_btn}  onClick={this.handle}>
+                            <div className="black-circle">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 </Col>
               </Row>
             </div>
             <div>
               <Row>
-                <Col lg="8">
+                <Col lg="12">
                   <div className="bottom-part">
-                    <div>
                       <p className="price-tag">From $699</p>
                       <p className="buy-now">Buy Now</p>
-                    </div>
-                    <div className="switch-part">
-                      <img
-                        onClick={this.clickedFront}
-                        src={iPhoneFrontThumbnail}
-                        alt="iPhone Front"
-                        className="iphone-front"
-                      />
-                      <img
-                        onClick={this.clickedBack}
-                        src={iPhoneRareThumbnail}
-                        alt="iPhone Rare"
-                        className="iphone-rare"
-                      />
-                      <div className="toggle-line" onClick={this.handle}>
-                        <div className={btn_class} onClick={this.handle}></div>
-                      </div>
-                    </div>
                   </div>
                 </Col>
               </Row> 
