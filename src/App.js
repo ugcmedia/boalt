@@ -11,7 +11,7 @@ import SignUp from "./components/SignUp";
 import PreHome from "./components/PreHome";
 import Home from "./components/Home";
 import Iphone from "./components/Iphone";
-// import Macbook from "./components/Macbook";
+import Macbook from "./components/Macbook";
 
 function isAuth() {
   if (!localStorage.getItem("apple-token")) return false;
@@ -44,13 +44,13 @@ function App() {
               isAuth() ? <Iphone /> : <Redirect to="/?error403" />
             }
           />
-          {/*<Route
+          <Route
             exact
             path="/macbook"
             render={() =>
               isAuth() ? <Macbook /> : <Redirect to="/?error403" />
             }
-          /> */}
+          />
         </Switch>
       </Router>
     </div>
