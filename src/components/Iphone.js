@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Row, Col } from 'reactstrap';
 import Navbar from "./Navbar";
 import Icons from "./Icons";
-import iPhoneFront from "../images/iphone1.png";
-import iPhoneRare from "../images/iphone4.png";
+import iPhoneFront from "../images/iphone-front.jpg";
+import iPhoneRare from "../images/iphone-rear.jpg";
 import iPhoneFrontThumbnail from "../images/apple-iphonexs-max-gold.png";
 import iPhoneRareThumbnail from "../images/apple-iphonexs-max-gold-back-2.png";
 
@@ -30,6 +30,7 @@ class Iphone extends React.Component {
     return (
       <div className="iphone">
         <Navbar />
+        <Icons/>
           <Container >
             <div>
               <Row>
