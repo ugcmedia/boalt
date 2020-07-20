@@ -16,7 +16,6 @@ class Icons extends React.Component{
       }
       if(this.props.location.pathname === path){
         output = output + "icon-active";
-        console.log("hi");
       }
       return output
     };
