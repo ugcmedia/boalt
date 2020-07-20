@@ -679,16 +679,14 @@
       text-align: center;
       margin-top: 25px;
       .watch-image {
-        width: 240px;
-        height: 420px;
+        width: 470px;
+        height: 431px;
       }
     }
     .bottom-part {
       padding-right: 30px;
-      display: flex;
-      justify-content: space-between;
       .price-tag {
-        margin-top: 30px;
+        margin-top: -40px;
         margin-left: 50px;
         font-family: poppins;
         font-size: 50px;
@@ -708,19 +706,7 @@
       }
     }
     .switch-part{
-      margin-top: -80px;
-      padding-bottom: 15px;
-      .iphone-front {
-        width: 103px;
-        height: 206px;
-        cursor: pointer;
-      }
-      .iphone-rare {
-        margin-left: 80px;
-        width: 103px;
-        height: 206px;
-        cursor: pointer;
-      }
+      padding: 15px;
       .toggle-line {
         margin-left: 43px;
         margin-top: 50px;
