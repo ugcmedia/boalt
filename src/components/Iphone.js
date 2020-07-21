@@ -26,6 +26,12 @@ class Iphone extends React.Component {
     },500)
     
   };
+  ok = ()=> {
+    console.log("hi");
+  }
+  ook = ()=> {
+    console.log("bye");
+  }
   clickedFront = () => {
     this.setState({ clicked: true });
     setTimeout(()=>{
@@ -122,7 +128,7 @@ class Iphone extends React.Component {
                         className="iphone-rare"
                       />
                       <div className="toggle-line" onClick={this.handle}>
-                        <div className={btn_class} onClick={this.handle}></div>
+                        <div className={btn_class} ></div>
                       </div>
                     </div>
                   </div>
