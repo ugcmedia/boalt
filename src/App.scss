@@ -191,11 +191,104 @@
       text-decoration: none;
     }
   }
+  .line-loader {
+    margin-top: -7px;
+    margin-left: 0 !important;
+    height: 12px;
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.line-loader .bar {
+    position: relative;
+    height: 12px;
+    background-color: dodgerblue;
+    animation-name: loader-animation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+} 
+@keyframes loader-animation {
+  0% {
+      left: -35%;
+      width: 35%;
+  }
+  100% {
+      left: 110%;
+      width: 35%
+  }
+}
+.dots{
+  // height: 40px;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // margin: -20px 0 0 -50px;
+  z-index: 999999;
+}
+.dots span{
+  -webkit-transition: all 6000ms ease;
+  transition: all 6000ms ease;
+  background: rgba(30, 144, 255, .5);
+  height: 15px;
+  width: 15px;
+  margin: 0 2px 0 0;
+  display: inline-block;
+  border-radius: 50%;
+  animation: wave 1.5s ease  infinite;
+  -webkit-animation: wave 1.5s ease infinite;
+}  
+
+.dots span:nth-child(1){  
+    animation-delay: 0;
+    -webkit-animation-delay: 0;
+}
+.dots span:nth-child(2){  
+    animation-delay: 100ms;
+    -webkit-animation-delay: 100ms;
+}
+.dots span:nth-child(3){  
+    animation-delay: 200ms;
+    -webkit-animation-delay: 200ms;
+}
+
+@-webkit-keyframes wave{
+  0%, 40%, 100% { 
+    -webkit-transform: translate(0, 0); 
+    transform: translate(0, 0);
+    background-color: rgba(30, 144, 255, .5);    
+  }
+  10% { 
+    -webkit-transform: translate(0, -15px); 
+    transform: translate(0, -15px); 
+    background-color: rgba(30, 144, 255, 1);    
+  }  
+}
+
+@keyframes wave{
+  0%, 40%, 100% { 
+    -webkit-transform: translate(0, 0); 
+    transform: translate(0, 0);
+    background-color: rgba(30, 144, 255, .5);    
+  }
+  10% { 
+    -webkit-transform: translate(0, -15px); 
+    transform: translate(0, -15px); 
+    background-color: rgba(30, 144, 255, 1);    
+  }  
+}
+.dot-text{
+  margin-left: -45px;
+}
 }
 
 // PreHome Page Sass
 
 .pre-home{
+  overflow: hidden;
   .pre-nav {
     text-align: center;
     top: 0px;
@@ -203,6 +296,7 @@
     height: 100px;
     background: #000000 0% 0% no-repeat padding-box;
     opacity: 1;
+    animation: come-down 2s;
     .pre-nav-logo {
       position: absolute;
       top: 32px;
@@ -212,6 +306,10 @@
     }
   }
   .pre-home-page {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
     background: #ffffff;
     margin-left: 107px;
     margin-right: 107px;
@@ -219,14 +317,12 @@
     background: transparent linear-gradient(180deg, #5ac8fa 0%, #ffffff00 100%) 0%
       0% no-repeat padding-box;
     opacity: 1;
+    animation: come-up 2s;
     .pre-apple {
-      position: absolute;
-      top: 50%;
-      left: 50%;
       width: 400px;
       height: 370px;
-      margin: -170px 0 0 -200px;
       opacity: 1;
+      animation: fade-in 2s;
     }
     .counter {
       position: absolute;
@@ -234,27 +330,6 @@
       left: 50%;
       width: 280px;
       margin: 0 0 0 -110px;
-      .year {
-        height: 80px;
-        margin-left: -25px;
-        opacity: 1;
-        font-family: poppins;
-        font-size: 50px;
-        font-weight: 900;
-      }
-      .first-digit {
-        margin-left: 30px;
-      }
-      .second-digit {
-        margin-left: 30px;
-      }
-
-      .third-digit {
-        margin-left: 30px;
-      }
-      .fourth-digit {
-        margin-left: 30px;
-      }
     }
   }
 }
@@ -281,6 +356,7 @@
     margin: -90px 0 0 -125px;
     opacity: 1;
     z-index: -1;
+    animation: fade-in 3s;
   }
   .welcome-title-container {
     width: 100%;
@@ -293,6 +369,7 @@
       letter-spacing: 0px;
       color: #000000;
       opacity: 1;
+      animation: fade-in 3s;
     }
     .products-title {
       margin-top: 10%;
@@ -301,6 +378,7 @@
       font-size: 20px;
       letter-spacing: 0px;
       opacity: 1;
+      animation: fade-in 3s;
     }
     .icons {
       margin-top: 5%;
@@ -867,6 +945,9 @@
 }
 
 
+
+// Animations
+
 .holder{
   display:inline-block;
   height:100px;
@@ -951,6 +1032,39 @@
 }
 
 
+@keyframes fade-in {
+  /* You could think of as "step 1" */
+  0% {
+    opacity: 0;
+  }
+  /* You could think of as "step 2" */
+  100% {
+    opacity: 1;
+
+  }
+}
+
+@keyframes come-down {
+  /* You could think of as "step 1" */
+  0% {
+    transform:translateY(-15%);
+  }
+  /* You could think of as "step 2" */
+  100% {
+    transform:translateY(0%);
+  }
+}
+
+@keyframes come-up {
+  /* You could think of as "step 1" */
+  0% {
+    transform:Scale(0.95);
+  }
+  /* You could think of as "step 2" */
+  100% {
+    transform:Scale(1);
+  }
+}
 
 
 
