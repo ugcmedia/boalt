@@ -65,34 +65,6 @@ class PreHome extends React.Component {
                 </div>
               </div>
             </div>
-            {/* <CountUp
-              className="year first-digit"
-              duration={3}
-              start={1}
-              separator=" "
-              end={2}
-            />
-            <CountUp
-              className="year second-digit"
-              duration={3}
-              start={20}
-              separator=" "
-              end={0}
-            />
-            <CountUp
-              className="year third-digit"
-              duration={3}
-              start={30}
-              separator=" "
-              end={1}
-            />
-            <CountUp
-              className="year fourth-digit"
-              duration={3}
-              start={50}
-              separator=" "
-              end={9}
-            /> */}
           </div>
         </div>
       </div>
