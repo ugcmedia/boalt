@@ -36,7 +36,6 @@ class SignUpForm extends Component {
           this.setState({signingUp: false})
           this.setState({loader: true})
           setTimeout(() => {
-            // this.props.history.push("/prehome");
             this.setState({
               fields: {
                 name: "",
@@ -44,6 +43,7 @@ class SignUpForm extends Component {
                 password: "",
               },
             });
+            this.props.history.push("/prehome");
           }, 3000);
         }, 4000);
       }
