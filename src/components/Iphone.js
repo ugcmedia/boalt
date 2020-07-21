@@ -52,7 +52,7 @@ class Iphone extends React.Component {
   };
 
   componentDidMount(){
-    axios.get("https://jsonplaceholder.typicode.com/todos/1").then(res=> console.log(res))
+    axios.get("https://boalt-interview.herokuapp.com/api/shipping-dates").then(res=> console.log(res))
   }
 
   render() {
