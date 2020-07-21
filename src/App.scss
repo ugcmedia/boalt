@@ -20,12 +20,21 @@
   height: 420px;
   background: #ffffff;
   .signing-in{
-    margin-top: 160px;
-    margin-left: 205px;
+    width: 480px;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    p{
+      font-size: 16px;
+      font-family: poppins;
+      font-weight: 600;
+    }
   }
   .loader{
-    margin-left: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-size: 50px;
   }
   .login-form {
@@ -1273,6 +1282,10 @@
   .signup-card{
     width: 320px;
     height: 440px;
+  }
+  .signing-in,
+  .signing-up{
+    width: 100% !important;
   }
   .pre-home-page{
     margin-left: 0px !important;
