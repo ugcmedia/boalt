@@ -42,6 +42,9 @@ const Macbook = () => {
                               Memory
                             </p>
                           </div>
+                          <span className="mac-shipping">
+                      <p >Starts Shipping MM-DD-YYYY</p>
+                    </span>
                         </div>
                       </span>
                     </div>
