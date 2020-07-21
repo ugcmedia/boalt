@@ -70,10 +70,8 @@ class Navbar extends React.Component {
               </svg>
             </span>
           </NavLink>
-          <NavLink
-            to="#"  
+          <div
             className="nav-link"
-            activeClassName="navbar-link-active"
           >
             <span onClick={this.handleSignOut} className="nav-text notify">
              Notify me
@@ -93,7 +91,7 @@ class Navbar extends React.Component {
                 </g>
             </svg>
             </span>
-          </NavLink>
+          </div>
           {/* <div className="nav-link sign-out-btn">
             <svg
             onClick={this.handleSignOut}
