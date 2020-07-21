@@ -78,6 +78,9 @@ class Iphone extends React.Component {
                       <p > The future is here. Join the iPhone Upgrade Program to get the
                       latest iPhone - NOW!</p>
                     </span>
+                    <span className="iphone-shipping">
+                      <p >Starts Shipping MM-DD-YYYY</p>
+                    </span>
                     <svg className="background-logo" xmlns="http://www.w3.org/2000/svg" width="165.589" height="203.119" viewBox="0 0 165.589 203.119">
   <g id="Apple_Logo_Light_Gray" data-name="Apple Logo Light Gray" transform="translate(-386.5 -522.376)">
     <g id="Group_4" data-name="Group 4" transform="translate(386.5 522.376)" opacity="0.18">
