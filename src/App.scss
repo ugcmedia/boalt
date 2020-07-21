@@ -293,6 +293,8 @@
 .pre-home{
   overflow: hidden;
   .pre-nav {
+    display: flex;
+    justify-content: center;
     text-align: center;
     top: 0px;
     left: 0px;
@@ -301,8 +303,7 @@
     opacity: 1;
     animation: come-down 2s;
     .pre-nav-logo {
-      position: absolute;
-      top: 32px;
+      margin-top: 30px;
       width: 43px;
       height: 40px;
       opacity: 1;
@@ -312,6 +313,7 @@
     justify-content: center;
     align-items: center;
     display: flex;
+    flex-direction: column;
     position: relative;
     background: #ffffff;
     margin-left: 107px;
@@ -328,11 +330,7 @@
       animation: fade-in 2s;
     }
     .counter {
-      position: absolute;
-      top: 85%;
-      left: 50%;
-      width: 280px;
-      margin: 0 0 0 -110px;
+      margin-top: 80px;
     }
   }
 }
@@ -958,7 +956,7 @@
   }
 }
 
-// Animations
+// Counter Animation
 .holder{
   display:inline-block;
   height:100px;
@@ -1043,6 +1041,7 @@
 }
 
 
+// Animation Names
 @keyframes fade-in {
   /* You could think of as "step 1" */
   0% {
@@ -1144,6 +1143,16 @@
   }
 }
 
+@media(max-width: 915px){
+  .iphone-title-sub,
+  .watch-title-sub{
+    font-size: 60px !important;
+  }
+  .nav-link{
+    margin: 0px 10px !important;
+  }
+}
+
 @media(max-width: 850px){
   .iphone{
     .bottom-part{
@@ -1163,16 +1172,6 @@
     }
   }
 
-}
-
-@media(max-width: 915px){
-  .iphone-title-sub,
-  .watch-title-sub{
-    font-size: 60px !important;
-  }
-  .nav-link{
-    margin: 0px 10px !important;
-  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -1220,6 +1219,14 @@
   .mac-title-part{
     padding-left: 30px !important;
   }
+  .pre-home-page{
+    margin-left: 50px !important;
+    margin-right: 50px !important;
+  }
+  .pre-apple{
+    width: 280px !important;
+    height: 273px !important;
+  }
 }
 
 @media only screen and (max-width: 650px) {
@@ -1246,6 +1253,10 @@
   .signup-card{
     width: 320px;
     height: 440px;
+  }
+  .pre-home-page{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
   .iphone .container,
   .mac .container,
