@@ -30,7 +30,7 @@ class SignInForm extends Component {
         localStorage.setItem("apple-token", "apple-store-token");
         this.setState({loader: true})
         setTimeout(() => {
-          this.props.history.push("/prehome");
+          // this.props.history.push("/prehome");
         }, 3000);
       } else {
         // else error will be shown at the top
@@ -55,8 +55,8 @@ class SignInForm extends Component {
     return this.state.loader ? (
       <div className="login-card">
           <div className="signing-in">
-          <i className="fa fa-spinner fa-spin loader"></i>
-          <p>Signing in...</p>
+            <i className="fa fa-spinner fa-spin loader"></i>
+            <p>Signing in...</p>
           </div>
       </div>
     ) : (
