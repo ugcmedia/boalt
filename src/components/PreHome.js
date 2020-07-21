@@ -1,18 +1,13 @@
 import React from "react";
-import { Redirect,withRouter } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 import apple from "../images/apple.png";
 
 class PreHome extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      redirect: false,
       animate: false,
     };
-  }
-
-  goHome(){
-    // console.log("click");
   }
 
   componentDidMount() {
@@ -20,16 +15,15 @@ class PreHome extends React.Component {
     this.setState({animate: true})
     }, 500);
   }
+  
 
   render() {
     let digit_class1 = this.state.animate ? "digit-animate1" : "digit1";
     let digit_class2 = this.state.animate ? "digit-animate2" : "digit2";
     let digit_class3 = this.state.animate ? "digit-animate3" : "digit3";
     let digit_class4 = this.state.animate ? "digit-animate4" : "digit4";
-    return this.state.redirect ? (
-      <Redirect to="/home" />
-    ) : (
-      <div className="pre-home" onClick={this.goHome()}>
+    return (
+      <div className="pre-home">
         <div className="pre-nav">
         <svg className="pre-nav-logo" xmlns="http://www.w3.org/2000/svg" width="31.961" height="39.205" viewBox="0 0 31.961 39.205">
   <g id="Group_3" data-name="Group 3" transform="translate(256 -1333)">
@@ -40,8 +34,10 @@ class PreHome extends React.Component {
   </g>
 </svg>
         </div>
+        
+          <NavLink to="/home">
         <div className="pre-home-page">
-          <img onClick={this.goHome()} src={apple} alt="apple" className="pre-apple" />
+          <img src={apple} alt="apple" className="pre-apple" />
           <div className="counter">
             <div>
               <div className="holder">
@@ -67,9 +63,12 @@ class PreHome extends React.Component {
             </div>
           </div>
         </div>
+        </NavLink>
       </div>
     );
   }
 }
+
+
 
 export default withRouter(PreHome);
