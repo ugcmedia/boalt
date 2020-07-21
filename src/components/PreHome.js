@@ -7,59 +7,25 @@ class PreHome extends React.Component {
     super(props);
     this.state = {
       redirect: false,
-      holder: [],
-      number: ""
+      animate: false,
     };
   }
 
   goHome(){
     // console.log("click");
   }
-  randomize(){
-    var randomm=Math.floor(Math.random()*9999);
-    var num;
-    if(randomm===0 ){num="0000"}
-    else if(randomm<10  ){num="000"+randomm;}
-    else if(randomm<100 ){num="00"+randomm;}
-    else if(randomm<1000){num="0"+randomm;}
-    else{num=randomm}
-    this.setState({ number: num }, () => {
-      this.sliceNum();
-    }); 
-  }
-  sliceNum(){
-    let array = [];
-    for(var i=0;i<4;i++){
-      let value= this.state.number.toString().slice(i,i+1);
-      array.push(value)
-    }
-    this.setState({ holder: [...this.state.holder, array] }, () => {
-      this.turnTheSlot();
-    })
-  }
-  reset(){
-     this.setState({ holder: []});
-   }
-  turnTheSlot(){
-    for(var i=0; i<4; i++){
-      var value = this.state.holder[i];
-      console.log((this.state.holder[i]));
-      var margin= 100 * value;
-      // $("#"+i+"").css("margin-top","-"+margin+"px");
-    }
-  }
-
-  go(){
-    this.randomize()
-    // this.turnTheSlot();
-    // this.reset();
-  }
 
   componentDidMount() {
-    this.go()
+    setTimeout(() => {
+    this.setState({animate: true})
+    }, 500);
   }
 
   render() {
+    let digit_class1 = this.state.animate ? "digit-animate1" : "digit1";
+    let digit_class2 = this.state.animate ? "digit-animate2" : "digit2";
+    let digit_class3 = this.state.animate ? "digit-animate3" : "digit3";
+    let digit_class4 = this.state.animate ? "digit-animate4" : "digit4";
     return this.state.redirect ? (
       <Redirect to="/home" />
     ) : (
@@ -79,22 +45,22 @@ class PreHome extends React.Component {
           <div className="counter">
             <div>
               <div className="holder">
-                <div className="digitHolder" id="1">
+                <div className={digit_class1}>
                   0<br/>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9
                 </div>
               </div>
               <div className="holder">
-                <div className="digitHolder" id="2">
+                <div className={digit_class2}>
                   0<br/>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9
                 </div>
               </div>
               <div className="holder">
-                <div className="digitHolder" id="3">
+                <div className={digit_class3} >
                   0<br/>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9
                 </div>
               </div>
               <div className="holder">
-                <div className="digitHolder" id="4">
+                <div className={digit_class4}>
                   0<br/>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9
                 </div>
               </div>
