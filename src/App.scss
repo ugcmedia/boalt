@@ -425,15 +425,33 @@
     width: 40px;
     height: 40px;
   }
+  .iphone-icon-vertical :hover{
+    -webkit-transform:scale(0.7,0.7);
+    -moz-transform:scale(0.7,0.7);
+    -o-transform:scale(0.7,0.7);
+    transform:scale(0.7,0.7);
+  }
   .mac-icon-vertical {
     margin-top: 15px;
     width: 32px;
     height: 38px;
   }
+  .mac-icon-vertical :hover{
+    -webkit-transform:scale(0.7,0.7);
+    -moz-transform:scale(0.7,0.7);
+    -o-transform:scale(0.7,0.7);
+    transform:scale(0.7,0.7);
+  }
   .watch-icon-vertical {
     margin-top: 20px;
     width: 25px;
     height: 30px;
+  }
+  .watch-icon-vertical :hover{
+    -webkit-transform:scale(0.7,0.7);
+    -moz-transform:scale(0.7,0.7);
+    -o-transform:scale(0.7,0.7);
+    transform:scale(0.7,0.7);
   }
   .icon-active{
     opacity: 1 !important;
@@ -848,27 +866,90 @@
   }
 }
 
+
 .holder{
   display:inline-block;
   height:100px;
   width:auto;
   text-align:center;
   overflow:hidden;
-  background:#fff;
+  background:transparent;
   color:#000;
   padding:0;
 }
-
-.digitHolder{
+.digit1{
   line-height:100px;
   margin:0 8px 0 8px;
-  font-size:100px;
-  font-family:oswald;
-  -webkit-transition:margin-top 1s ease;
-  -moz-transition:margin-top 1s ease;
-  -o-transition:margin-top 1s ease;
-  transition:margin-top 1s ease;
+  font-size:70px;
+  font-family:poppins;
+  font-weight: 600;
 }
+.digit2{
+  line-height:100px;
+  margin:-900px 8px 0 8px;
+  font-size:70px;
+  font-family:poppins;
+  font-weight: 600;
+}
+.digit3{
+  line-height:100px;
+  margin:-900px 8px 0 8px;
+  font-size:70px;
+  font-family:poppins;
+  font-weight: 600;
+}
+.digit4{
+  line-height:100px;
+  margin:0 8px 0 8px;
+  font-size:70px;
+  font-family:poppins;
+  font-weight: 600;
+}
+.digit-animate1{
+  line-height:100px;
+  margin:-200px 8px 0 8px;
+  font-size:70px;
+  font-family:poppins;
+  font-weight: 600;
+  -webkit-transition:margin-top 2s ease;
+  -moz-transition:margin-top 2s ease;
+  -o-transition:margin-top 2s ease;
+  transition:margin-top 2s ease;
+}
+.digit-animate2{
+  line-height:100px;
+  margin:0 8px 0 8px;
+  font-size:70px;
+  font-family:poppins;
+  font-weight: 600;
+  -webkit-transition:margin-top 2s ease;
+  -moz-transition:margin-top 2s ease;
+  -o-transition:margin-top 2s ease;
+  transition:margin-top 2s ease;
+}
+.digit-animate3{
+  line-height:100px;
+  margin:-100px 8px 0 8px;
+  font-size:70px;
+  font-family:poppins;
+  font-weight: 600;
+  -webkit-transition:margin-top 2s ease;
+  -moz-transition:margin-top 2s ease;
+  -o-transition:margin-top 2s ease;
+  transition:margin-top 2s ease;
+}
+.digit-animate4{
+  line-height:100px;
+  margin:-900px 8px 0 8px;
+  font-size:70px;
+  font-family:poppins;
+  font-weight: 600;
+  -webkit-transition:margin-top 2s ease;
+  -moz-transition:margin-top 2s ease;
+  -o-transition:margin-top 2s ease;
+  transition:margin-top 2s ease;
+}
+
 
 
 
@@ -887,10 +968,6 @@
     }
   }
 }
-
-
-
-
 
 
 @media(max-width: 1450px){
@@ -1025,7 +1102,6 @@
     display: none !important;
   }
 }
-
 
 @media(max-width: 520px){
   .login-card{
