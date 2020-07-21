@@ -96,7 +96,7 @@
   }
   .sign-up {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 65px;
     font-size: 12px;
     font-family: poppins;
     font-weight: bolder;
@@ -114,8 +114,24 @@
   height: 480px;
   background: #ffffff;
   .signing-up{
-    margin-top: 200px;
-    margin-left: 205px;
+    width: 480px;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    h4{
+      margin-top: 10px;
+      font-family: poppins;
+      font-weight: 600;      
+    }
+    p{
+      margin-top: 10px;
+      font-size: 16px;
+      font-family: poppins;
+      font-weight: 600;
+    }
   }
   .loader{
     margin-left: 10px;
@@ -179,7 +195,7 @@
   }
   .sign-in-for-sign-up {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 65px;
     font-size: 12px;
     font-family: poppins;
     font-weight: bolder;
@@ -270,9 +286,6 @@
     transform: translate(0, -15px); 
     background-color: rgba(30, 144, 255, 1);    
   }  
-}
-.dot-text{
-  margin-left: -45px;
 }
 }
 
@@ -1094,8 +1107,9 @@
 
 @media(max-width: 1450px){
   .iphone-title-sub,
+  .watch-title-sub,
   .mac-title-sub{
-    font-size: 60px !important;
+    font-size: 55px !important;
   }
   .tech-compute{
     font-size: 40px !important;
@@ -1111,15 +1125,11 @@
   .mac-image {
     height: 290px  !important;
   }
-  .watch{
-    .watch-title-sub{
-      font-size: 55px !important;
-    }
-  }
 }
 
 @media(max-width: 1200px){
-  .iphone-title-sub{
+  .iphone-title-sub,
+  .watch-title-sub{
     font-size: 80px !important;
   }
   .mac-image {
@@ -1155,7 +1165,8 @@
 }
 
 @media(max-width: 915px){
-  .iphone-title-sub{
+  .iphone-title-sub,
+  .watch-title-sub{
     font-size: 60px !important;
   }
   .nav-link{
@@ -1189,6 +1200,7 @@
 
 @media(max-width: 680px){
   .iphone-title-sub,
+  .watch-title-sub,
   .mac-title-sub{
     font-size: 40px !important;
   }
@@ -1248,13 +1260,20 @@
   }
   .watch{
     .watch-title{
-      font-size: 14px !important;
+      font-size: 32px !important;
     }
     .watch-title-sub{
       font-size: 35px !important;
     }
     .watch-title-description{
       font-size: 13px !important;
+      p{
+        width: 300px !important;
+      }
+    }
+    .watch-image{
+      width: 395px !important;
+      height: 360px !important;
     }
   }
   .iphone{
