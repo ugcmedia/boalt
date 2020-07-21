@@ -30,7 +30,7 @@ class SignInForm extends Component {
         localStorage.setItem("apple-token", "apple-store-token");
         this.setState({loader: true})
         setTimeout(() => {
-          // this.props.history.push("/prehome");
+          this.props.history.push("/prehome");
         }, 3000);
       } else {
         // else error will be shown at the top

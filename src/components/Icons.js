@@ -8,6 +8,7 @@ class Icons extends React.Component{
       route: "",
     };
   }
+  
   componentWillMount() {
     if(this.props.location.pathname === "/iphone"){
       this.setState({route : "iphone"})
