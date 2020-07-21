@@ -37,7 +37,7 @@ class Iphone extends React.Component {
                       <p >Change Starts Within.</p>
                     </span>
                     <span className="watch-title-description">
-                      <p > Apple Watch Series 4. Fundamentally redesigned and re‑engineered to help you be even more active, healthy, and connected.</p>
+                      <p> Apple Watch Series 4. Fundamentally redesigned and re‑engineered to help you be even more active, healthy, and connected.</p>
                     </span>
                     <span className="watch-shipping">
                       <p >Starts Shipping MM-DD-YYYY</p>
