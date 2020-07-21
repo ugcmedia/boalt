@@ -36,16 +36,16 @@ class SignUpForm extends Component {
           this.setState({signingUp: false})
           this.setState({loader: true})
           setTimeout(() => {
-            this.props.history.push("/prehome");
+            // this.props.history.push("/prehome");
+            this.setState({
+              fields: {
+                name: "",
+                email: "",
+                password: "",
+              },
+            });
           }, 3000);
         }, 4000);
-        this.setState({
-          fields: {
-            name: "",
-            email: "",
-            password: "",
-          },
-        });
       }
     };
   }
@@ -59,7 +59,7 @@ class SignUpForm extends Component {
       </div>
       <div className="signing-up">
       <i className="fa fa-spinner fa-spin loader"></i>
-      <p>Finishing Up...</p>
+      <p>Get ready to take off! Logging in...</p>
       </div>
   </div>
   )
@@ -70,12 +70,12 @@ class SignUpForm extends Component {
         <div className="bar"></div>
       </div>
       <div className="signing-up">
+      <h4>Welcome {this.state.fields.name}</h4>
         <div className="dots">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <h4 className="dot-text">Signing you Up...</h4>
       </div>
   </div>
   )
