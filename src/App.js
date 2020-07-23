@@ -13,6 +13,7 @@ import Home from "./components/Home";
 import Iphone from "./components/Iphone";
 import Macbook from "./components/Macbook";
 import Watch from "./components/Watch";
+import Navbar from "./components/Navbar";
 
 function isAuth() {
   if (!localStorage.getItem("apple-token")) return false;
@@ -30,10 +31,16 @@ function App() {
             exact
             path="/prehome"
             render={() =>
-              isAuth() ? <PreHome /> : <Redirect to="/?error403" />
+              isAuth() ? (
+                <div>
+                  <PreHome />
+                </div>
+              ) : (
+                <Redirect to="/?error403" />
+              )
             }
           />
-           <Route
+          <Route
             exact
             path="/home"
             render={() => (isAuth() ? <Home /> : <Redirect to="/?error403" />)}
@@ -55,9 +62,7 @@ function App() {
           <Route
             exact
             path="/watch"
-            render={() =>
-              isAuth() ? <Watch /> : <Redirect to="/?error403" />
-            }
+            render={() => (isAuth() ? <Watch /> : <Redirect to="/?error403" />)}
           />
         </Switch>
       </Router>

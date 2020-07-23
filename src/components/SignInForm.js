@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import ReactFormInputValidation from "react-form-input-validation";
+import "animate.css";
+import { ReactComponent as PhoneSvg } from "../loader/loader/iphone_blue.svg";
+import { ReactComponent as MacSvg } from "../loader/loader/mac_blue.svg";
+import { ReactComponent as WatchSvg } from "../loader/loader/watch_blue.svg";
 
 class SignInForm extends Component {
   constructor(props) {
@@ -28,7 +32,7 @@ class SignInForm extends Component {
         fields.password === "123456"
       ) {
         localStorage.setItem("apple-token", "apple-store-token");
-        this.setState({loader: true})
+        this.setState({ loader: true });
         setTimeout(() => {
           this.props.history.push("/prehome");
         }, 3000);
@@ -54,10 +58,19 @@ class SignInForm extends Component {
   render() {
     return this.state.loader ? (
       <div className="login-card">
-          <div className="signing-in">
-            <i className="fa fa-spinner fa-spin loader"></i>
-            <p>Signing in...</p>
+        <div className="signing-in" style={{ position: "relative" }}>
+          {/* <i className="fa fa-spinner fa-spin loader"></i> */}
+          <div className="mac-loader-div">
+            <MacSvg />
           </div>
+          <div className="phone-loader-div">
+            <PhoneSvg />
+          </div>
+          <div className="watch-loader-div">
+            <WatchSvg />
+          </div>
+          <p style={{ position: "absolute", bottom: 20 }}>Signing in...</p>
+        </div>
       </div>
     ) : (
       <div>

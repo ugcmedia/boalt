@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="318.581" height="235" viewBox="0 0 318.581 235">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.026" x2="1.044" y2="0.933" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#76d1fb"/>
+      <stop offset="0.448" stop-color="#fcfcfc"/>
+      <stop offset="1" stop-color="#76d1fb"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="mac_blue" transform="translate(-2428.382 -491.119)">
+    <path id="Path_13" data-name="Path 13" d="M2458.109,503.049v146.64a3.6,3.6,0,0,0,3.6,3.6H2713.64a3.6,3.6,0,0,0,3.6-3.6V503.049a11.93,11.93,0,0,0-11.93-11.93H2470.04A11.931,11.931,0,0,0,2458.109,503.049Zm130.876-6.815a1.315,1.315,0,1,1-1.312-1.233A1.274,1.274,0,0,1,2588.985,496.234ZM2465.954,499.7h243.438V644.167H2465.954Z" fill="url(#linear-gradient)"/>
+    <path id="Path_14" data-name="Path 14" d="M2428.821,656.106h136.343a.031.031,0,0,0-.031.031,3.756,3.756,0,0,0,3.756,3.756h37.568a3.756,3.756,0,0,0,3.756-3.756.031.031,0,0,0-.031-.031h136.343a.438.438,0,0,1,.438.438v3.4c0,3.619-26.107,6.553-29.727,6.553H2458.109c-3.619,0-29.727-2.934-29.727-6.553v-3.4A.439.439,0,0,1,2428.821,656.106Z" fill="url(#linear-gradient)"/>
+    <ellipse id="Ellipse_9" data-name="Ellipse 9" cx="134.5" cy="20.5" rx="134.5" ry="20.5" transform="translate(2448.382 685.119)" opacity="0.128" fill="url(#radial-gradient)"/>
+  </g>
+</svg>

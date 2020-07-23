@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="73" height="147.384" viewBox="0 0 73 147.384">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.231" y1="0.026" x2="1.376" y2="1.181" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#76d1fb"/>
+      <stop offset="0.483" stop-color="#fff"/>
+      <stop offset="1" stop-color="#76d1fb"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="iphone_blue" transform="translate(-880.307 -962.623)">
+    <g id="Iphone_icon" data-name="Iphone icon" transform="translate(889.227 962.623)">
+      <g id="Group_38" data-name="Group 38" transform="translate(0 0)">
+        <rect id="Rectangle_27" data-name="Rectangle 27" width="53" height="82" transform="translate(0.08 11.384)" fill="#fff"/>
+        <path id="Path_12" data-name="Path 12" d="M595.31,525.907H555.963a7.229,7.229,0,0,0-7.229,7.228v90.729a7.228,7.228,0,0,0,7.229,7.228H595.31a7.227,7.227,0,0,0,7.228-7.228V533.136A7.228,7.228,0,0,0,595.31,525.907Zm-23.667,7.638H580a.557.557,0,1,1,0,1.115h-8.358a.557.557,0,0,1,0-1.115Zm-4.386-.133a.691.691,0,1,1-.687.691A.689.689,0,0,1,567.258,533.412Zm33.285,83.23a.277.277,0,0,1-.277.277H551.007a.277.277,0,0,1-.277-.277V539.557a.277.277,0,0,1,.277-.277h49.259a.277.277,0,0,1,.277.277Z" transform="translate(-548.246 -525.907)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+    <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="36.5" cy="11" rx="36.5" ry="11" transform="translate(880.307 1088.007)" opacity="0.157" fill="url(#radial-gradient)"/>
+  </g>
+</svg>

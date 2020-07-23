@@ -1,9 +1,10 @@
 // App view Sass
 .sign-in-up-page {
+  overflow: hidden;
   top: 0px;
   left: 0px;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 99vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,14 +13,30 @@
   opacity: 1;
 }
 
+.mySlider_parent {
+  margin-top: 40px;
+  background-color: rgb(233, 233, 233);
+  height: 10px;
+  width: 240px;
+}
+.mySlider {
+  height: 10px;
+  width: 60px;
+  background-color: red;
+}
+.sliderValue {
+  display: none;
+}
 // Login Sass
 .login-card {
+  animation: fadeInUp;
+  animation-duration: 0.7s;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   width: 480px;
   height: 420px;
   background: #ffffff;
-  .signing-in{
+  .signing-in {
     width: 480px;
     height: 420px;
     display: flex;
@@ -27,18 +44,19 @@
     text-align: center;
     flex-direction: column;
     justify-content: center;
-    p{
+    p {
       font-size: 16px;
       font-family: poppins;
       font-weight: 600;
     }
   }
-  .loader{
+  .loader {
     margin-bottom: 10px;
     font-size: 50px;
   }
   .login-form {
     padding: 2rem;
+    overflow: none;
     .title {
       margin-top: 10px;
       margin-bottom: 0px;
@@ -74,6 +92,10 @@
       border-radius: 3px;
       margin-bottom: 10px;
       font-family: poppins;
+      &:focus {
+        outline:none;
+        box-shadow: 0 0 10px 1px #00D8FF;
+      }
     }
     .error-container {
       min-height: 30px;
@@ -116,13 +138,62 @@
 }
 
 // SignUp Sass
+
+@keyframes mac-move {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 70px;
+  }
+}
+
+@keyframes phone-move {
+  0% {
+    bottom: 140px;
+    left: 0px;
+  }
+  100% {
+    bottom: 140px;
+    visibility: visible;
+    left: 140px;
+  }
+}
+
+@keyframes watch-move {
+  0% {
+    bottom: 130px;
+    right: 0px;
+  }
+  100% {
+    visibility: visible;
+    bottom: 130px;
+    right: 140px;
+  }
+}
+.mac-loader-div {
+  position: absolute;
+  animation: mac-move 1.5s forwards;
+}
+.phone-loader-div {
+  position: absolute;
+  visibility: hidden;
+  animation: phone-move 1s forwards 0.5s;
+}
+.watch-loader-div {
+  position: absolute;
+  visibility: hidden;
+  animation: watch-move 0.5s forwards 0.8s;
+}
 .signup-card {
+  animation: fadeInUp;
+  animation-duration: 0.7s;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   width: 480px;
   height: 480px;
   background: #ffffff;
-  .signing-up{
+  .signing-up {
     width: 480px;
     height: 480px;
     display: flex;
@@ -130,19 +201,19 @@
     text-align: center;
     flex-direction: column;
     justify-content: center;
-    h4{
+    h4 {
       margin-top: 10px;
       font-family: poppins;
-      font-weight: 600;      
+      font-weight: 600;
     }
-    p{
+    p {
       margin-top: 10px;
       font-size: 16px;
       font-family: poppins;
       font-weight: 600;
     }
   }
-  .loader{
+  .loader {
     margin-left: 10px;
     margin-bottom: 5px;
     font-size: 50px;
@@ -173,6 +244,10 @@
       border-radius: 3px;
       margin-bottom: 10px;
       font-family: poppins;
+      &:focus {
+        outline:none;
+        box-shadow: 0 0 10px 1px #00D8FF;
+      }
     }
     .sign-up-btn {
       text-align: center;
@@ -200,7 +275,7 @@
         font-weight: 400;
         font-size: 12px;
       }
-    }    
+    }
   }
   .sign-in-for-sign-up {
     text-align: center;
@@ -221,9 +296,9 @@
     background-color: white;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-}
+  }
 
-.line-loader .bar {
+  .line-loader .bar {
     position: relative;
     height: 12px;
     background-color: dodgerblue;
@@ -231,76 +306,80 @@
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-} 
-@keyframes loader-animation {
-  0% {
+  }
+  @keyframes loader-animation {
+    0% {
       left: -35%;
       width: 35%;
-  }
-  100% {
+    }
+    100% {
       left: 110%;
-      width: 35%
+      width: 35%;
+    }
   }
-}
-.dots{
-  margin-top: 15px;
-  z-index: 999999;
-}
-.dots span{
-  -webkit-transition: all 6000ms ease;
-  transition: all 6000ms ease;
-  background: rgba(30, 144, 255, .5);
-  height: 15px;
-  width: 15px;
-  margin: 0 2px 0 0;
-  display: inline-block;
-  border-radius: 50%;
-  animation: wave 1.5s ease  infinite;
-  -webkit-animation: wave 1.5s ease infinite;
-}  
+  .dots {
+    margin-top: 15px;
+    z-index: 999999;
+  }
+  .dots span {
+    -webkit-transition: all 6000ms ease;
+    transition: all 6000ms ease;
+    background: rgba(30, 144, 255, 0.5);
+    height: 15px;
+    width: 15px;
+    margin: 0 2px 0 0;
+    display: inline-block;
+    border-radius: 50%;
+    animation: wave 1.5s ease infinite;
+    -webkit-animation: wave 1.5s ease infinite;
+  }
 
-.dots span:nth-child(1){  
+  .dots span:nth-child(1) {
     animation-delay: 0;
     -webkit-animation-delay: 0;
-}
-.dots span:nth-child(2){  
+  }
+  .dots span:nth-child(2) {
     animation-delay: 100ms;
     -webkit-animation-delay: 100ms;
-}
-.dots span:nth-child(3){  
+  }
+  .dots span:nth-child(3) {
     animation-delay: 200ms;
     -webkit-animation-delay: 200ms;
-}
-
-@-webkit-keyframes wave{
-  0%, 40%, 100% { 
-    -webkit-transform: translate(0, 0); 
-    transform: translate(0, 0);
-    background-color: rgba(30, 144, 255, .5);    
   }
-  10% { 
-    -webkit-transform: translate(0, -15px); 
-    transform: translate(0, -15px); 
-    background-color: rgba(30, 144, 255, 1);    
-  }  
-}
 
-@keyframes wave{
-  0%, 40%, 100% { 
-    -webkit-transform: translate(0, 0); 
-    transform: translate(0, 0);
-    background-color: rgba(30, 144, 255, .5);    
+  @-webkit-keyframes wave {
+    0%,
+    40%,
+    100% {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+      background-color: rgba(30, 144, 255, 0.5);
+    }
+    10% {
+      -webkit-transform: translate(0, -15px);
+      transform: translate(0, -15px);
+      background-color: rgba(30, 144, 255, 1);
+    }
   }
-  10% { 
-    -webkit-transform: translate(0, -15px); 
-    transform: translate(0, -15px); 
-    background-color: rgba(30, 144, 255, 1);    
-  }  
-}
+
+  @keyframes wave {
+    0%,
+    40%,
+    100% {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+      background-color: rgba(30, 144, 255, 0.5);
+    }
+    10% {
+      -webkit-transform: translate(0, -15px);
+      transform: translate(0, -15px);
+      background-color: rgba(30, 144, 255, 1);
+    }
+  }
 }
 
 // PreHome Page Sass
-.pre-home{
+.pre-home {
   overflow: hidden;
   .pre-nav {
     display: flex;
@@ -329,8 +408,8 @@
     margin-left: 107px;
     margin-right: 107px;
     height: calc(100vh - 107px);
-    background: transparent linear-gradient(180deg, #5ac8fa 0%, #ffffff00 100%) 0%
-      0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #5ac8fa 0%, #ffffff00 100%)
+      0% 0% no-repeat padding-box;
     opacity: 1;
     animation: come-up 2s;
     .pre-apple {
@@ -342,6 +421,21 @@
     .counter {
       margin-top: 80px;
     }
+  }
+}
+
+@keyframes custom-fadeIn {
+  0% {
+    visibility: hidden;
+    opacity: 0.1;
+    transform: translateY(-100px);
+    font-size: 100px;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    font-size: 79px;
+    transform: translateY(0px);
   }
 }
 
@@ -366,12 +460,13 @@
     margin: -90px 0 0 -125px;
     opacity: 1;
     z-index: -1;
-    animation: fade-in 3s;
+    animation: fade-in 3s forwards;
   }
   .welcome-title-container {
     width: 100%;
     text-align: center;
     .welcome-title {
+      visibility: hidden;
       margin-top: calc(50vh - 200px);
       font-family: poppins;
       font-size: 79px;
@@ -379,68 +474,136 @@
       letter-spacing: 0px;
       color: #000000;
       opacity: 1;
-      animation: fade-in 3s;
+      animation: custom-fadeIn 1s forwards 1s;
     }
     .products-title {
+      visibility: hidden;
       margin-top: 10%;
       color: #5ac8fa;
       font-family: poppins;
       font-size: 20px;
       letter-spacing: 0px;
       opacity: 1;
-      animation: fade-in 3s;
+      // animation: slide-in 0.5s forwards 2s;
+      animation: products-title-animation 1s forwards 2s;
     }
     .icons {
+      visibility: hidden;
       margin-top: 5%;
       text-align: center;
       display: flex;
       justify-content: center;
+      animation: visiblity-animation 2s forwards 2.5s;
       .iphone-icon {
         width: 22px;
         height: 40px;
         margin-left: 10px;
+        opacity: 1;
       }
       .mac-icon {
         margin-top: 13px;
         margin-left: 50px;
         width: 37px;
         height: 25px;
+        opacity: 0.8;
       }
       .watch-icon {
         margin-top: 4px;
         margin-left: 50px;
         width: 25px;
         height: 35px;
+        opacity: 0.8;
       }
       .iphone-icon:hover {
-        -webkit-transform:translateY(-8px);
-        -moz-transform:translateY(-8px);
-        -o-transform:translateY(-8px);
-        transform:translateY(-8px);
+        color: rgb(35, 35, 35);
+        -webkit-transform: translateY(-14px);
+        -moz-transform: translateY(-14px);
+        -o-transform: translateY(-14px);
+        transform: translateY(-14px);
+        -webkit-box-shadow: 0px 25px 15px -9px rgb(35, 35, 35);
+        -moz-box-shadow: 0px 25px 15px -9px rgb(35, 35, 35);
+        box-shadow: 0px 25px 15px -9px rgb(0, 0, 0);
+        opacity: 1;
+        transition: 0.3s;
+        #icon {
+          fill: rgba(61, 61, 61, 0.5);
+        }
       }
       .mac-icon:hover {
-        -webkit-transform:translateY(-8px);
-        -moz-transform:translateY(-8px);
-        -o-transform:translateY(-8px);
-        transform:translateY(-8px);
+        -webkit-transform: translateY(-14px);
+        -moz-transform: translateY(-14px);
+        -o-transform: translateY(-14px);
+        transform: translateY(-14px);
+        -webkit-box-shadow: 0px 25px 15px -9px rgb(35, 35, 35);
+        -moz-box-shadow: 0px 25px 15px -9px rgb(35, 35, 35);
+        box-shadow: 0px 25px 15px -9px rgb(35, 35, 35);
+        opacity: 1;
+        transition: 0.3s;
+        #icon {
+          fill: rgba(61, 61, 61, 0.5);
+        }
       }
       .watch-icon:hover {
-        -webkit-transform:translateY(-8px);
-        -moz-transform:translateY(-8px);
-        -o-transform:translateY(-8px);
-        transform:translateY(-8px);
+        -webkit-transform: translateY(-14px);
+        -moz-transform: translateY(-14px);
+        -o-transform: translateY(-14px);
+        transform: translateY(-14px);
+        -webkit-box-shadow: 0px 25px 15px -9px rgb(35, 35, 35);
+        -moz-box-shadow: 0px 25px 15px -9px rgb(35, 35, 35);
+        box-shadow: 0px 25px 15px -9px rgb(35, 35, 35);
+        transition: 0.3s;
+        #icon {
+          fill: rgba(61, 61, 61, 0.5);
+        }
       }
     }
   }
 }
-
+@keyframes products-title-animation {
+  0% {
+    visibility: hidden;
+    position: relative;
+    bottom: -100px;
+  }
+  100% {
+    visibility: visible;
+    // position: static;
+    bottom: 100px;
+  }
+}
+@keyframes visiblity-animation {
+  0% {
+    opacity: 0.1;
+    position: relative;
+    bottom: -10px;
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    bottom: 10px;
+  }
+}
 // Navbar Sass
+
+@keyframes navEffect {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 100px;
+  }
+}
 .nav {
   height: 100px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   .nav-logo-container {
+    position: absolute;
+    animation: navEffect 0.3s forwards;
+    -webkit-animation: navEffect 0.2s forwards;
+    // padding-right: 200px;
     width: 100px;
     height: 100px;
     background-color: black;
@@ -452,6 +615,7 @@
     }
   }
   .nav-links {
+    margin-left: 250px;
     display: inline-flex;
     .nav-link {
       align-self: center;
@@ -464,10 +628,10 @@
       color: #707070;
       opacity: 1;
       text-decoration: none;
-      .nav-text{
+      .nav-text {
         display: block;
       }
-      .nav-icon{
+      .nav-icon {
         display: none;
       }
     }
@@ -476,21 +640,39 @@
       color: black;
     }
     .iphone {
+      transition: 0.5s;
       margin-left: calc(100vw - 900px);
     }
     .macbook {
+      transition: 0.5s;
       margin-left: 40px;
     }
     .watch {
+      transition: 0.5s;
       margin-left: 40px;
+    }
+    .iphone:hover {
+      color: black;
+    }
+    .macbook:hover {
+      color: black;
+    }
+    .watch:hover {
+      color: black;
     }
     .notify {
       padding: 4px 18px;
       border-radius: 17px;
-      background-color: #5AC8FA;
+      background-color: #5ac8fa;
       color: white;
       margin-left: 40px;
       cursor: pointer;
+      transition: 0.8s;
+    }
+    .notify:hover {
+      background-color: black;
+      color: white;
+      transition: 0.8s;
     }
     .sign-out-btn {
       margin-left: 30px;
@@ -507,11 +689,10 @@
         cursor: pointer;
       }
     }
-
   }
 }
-.nav::before{
-  display: none;
+.nav::before {
+  // display: none;
   content: none;
 }
 
@@ -530,50 +711,59 @@
     width: 40px;
     height: 40px;
   }
-  .iphone-icon-vertical:hover{
-    -webkit-transform:translateY(-8px);
-    -moz-transform:translateY(-8px);
-    -o-transform:translateY(-8px);
+  .iphone-icon-vertical:hover {
+    -webkit-transform: translateY(-8px);
+    -moz-transform: translateY(-8px);
+    -o-transform: translateY(-8px);
     transform: translateY(-8px);
+    box-shadow: 0px 35px 10px -13px rgba(88, 88, 88, 0.258);
+    transition: 0.3s;
   }
   .mac-icon-vertical {
     margin-top: 15px;
     width: 32px;
     height: 38px;
   }
-  .mac-icon-vertical:hover{
-    -webkit-transform:translateY(-8px);
-    -moz-transform:translateY(-8px);
-    -o-transform:translateY(-8px);
-    transform:translateY(-8px);
+  .mac-icon-vertical:hover {
+    -webkit-transform: translateY(-8px);
+    -moz-transform: translateY(-8px);
+    -o-transform: translateY(-8px);
+    transform: translateY(-8px);
+    box-shadow: 0px 30px 10px -13px rgba(121, 121, 121, 0.85);
+    transition: 0.3s;
   }
   .watch-icon-vertical {
     margin-top: 20px;
     width: 25px;
     height: 30px;
   }
-  .watch-icon-vertical:hover{
-    -webkit-transform:translateY(-8px);
-    -moz-transform:translateY(-8px);
-    -o-transform:translateY(-8px);
-    transform:translateY(-8px);
+  .watch-icon-vertical:hover {
+    -webkit-transform: translateY(-8px);
+    -moz-transform: translateY(-8px);
+    -o-transform: translateY(-8px);
+    transform: translateY(-8px);
+    box-shadow: 0px 30px 10px -10px rgb(83, 83, 83);
+    transition: 0.3s;
   }
-  .icon-active{
+  .icon-active {
     opacity: 1 !important;
   }
 }
 
 // iPhone Page Sass
-.iphone{
-  .container{
+.iphone {
+  overflow: hidden;
+  .container {
+    animation: slideInUp;
+    animation-duration: 1s;
     margin: 0 100px !important;
     width: calc(100vw - 200px) !important;
     padding: 0 !important;
     .iphone-title-part {
       padding: 50px;
       width: 100%;
-      background: transparent linear-gradient(90deg, #f2f2f2 0%, #ffffff00 100%) 0%
-        0% no-repeat padding-box;
+      background: transparent linear-gradient(90deg, #f2f2f2 0%, #ffffff00 100%)
+        0% 0% no-repeat padding-box;
       opacity: 1;
       .iphone-title {
         font-family: poppins;
@@ -597,18 +787,18 @@
         letter-spacing: 0px;
         color: #999999;
         opacity: 1;
-        p{
+        p {
           width: 450px;
         }
       }
-      .iphone-shipping{
+      .iphone-shipping {
         font-family: poppins;
         font-size: 14px;
         letter-spacing: 0px;
-        color: #FF3B30;
+        color: #ff3b30;
         opacity: 1;
       }
-      .background-logo{
+      .background-logo {
         position: absolute;
         top: 10%;
         left: 80%;
@@ -618,7 +808,7 @@
       text-align: center;
       height: 520px;
       .iphone-image {
-      margin-top: 30px;
+        margin-top: 30px;
         width: 320px;
         height: 620px;
       }
@@ -647,7 +837,7 @@
         opacity: 1;
       }
     }
-    .switch-part{
+    .switch-part {
       padding-bottom: 15px;
       padding-right: 100px;
       .iphone-front {
@@ -692,57 +882,60 @@
   .slide-in {
     animation: slide-in 1.5s forwards;
     -webkit-animation: slide-in 1.5s forwards;
-}
+  }
 
-.slide-out {
+  .slide-out {
     animation: slide-out 1.5s forwards;
     -webkit-animation: slide-out 1.5s forwards;
-}
-    
-@keyframes slide-in {
-  0% { 
-    opacity: 1;
-    transform: translateX(0%);
   }
-  50%{
-    transform: translateX(120%);
-    opacity: 0;
+
+  @keyframes slide-in {
+    0% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+    50% {
+      transform: translateX(120%);
+      opacity: 0;
+    }
+    75% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
   }
-  75%{
-    opacity: 0.5;
+
+  @keyframes slide-out {
+    0% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+    50% {
+      transform: translateX(120%);
+      opacity: 0;
+    }
+    75% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
   }
-  100%{
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-    
-@keyframes slide-out {
-  0% { 
-    opacity: 1;
-    transform: translateX(0%);
-  }
-  50%{
-    transform: translateX(120%);
-    opacity: 0;
-  }
-  75%{
-    opacity: 0.5;
-  }
-  100%{
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
 }
 
 // Macbook Sass
-.mac{
-  .container{
+.mac {
+  overflow: hidden;
+  .container {
+    animation: slideInRight;
+    animation-duration: 0.5s;
     margin: 0 100px !important;
     width: calc(100vw - 200px) !important;
     padding: 0 !important;
-    .inner-container{
+    .inner-container {
       background: black !important;
       .mac-title-part {
         padding: 30px;
@@ -766,38 +959,38 @@
           opacity: 1;
         }
         .mac-title-description {
-          .mac-desc{
+          .mac-desc {
             display: flex;
-            .right-desc{
+            .right-desc {
               margin-left: 35px;
             }
-            .tech-compute{
-            font-family: poppins;
-            font-size: 50px;
-            font-weight: bold;
-            text-align: left;
-            letter-spacing: 0px;
-            color: #cccccc;
-            opacity: 0.44;
+            .tech-compute {
+              font-family: poppins;
+              font-size: 50px;
+              font-weight: bold;
+              text-align: left;
+              letter-spacing: 0px;
+              color: #cccccc;
+              opacity: 0.44;
             }
-            .tech-detail{
-            font-family: poppins;
-            font-size: 20px;
-            font-weight: bold;
-            width: 190px;
-            height: 40px;
-            text-align: left;
-            letter-spacing: 0px;
-            color: #cccccc;
-            opacity: 0.44;
+            .tech-detail {
+              font-family: poppins;
+              font-size: 20px;
+              font-weight: bold;
+              width: 190px;
+              height: 40px;
+              text-align: left;
+              letter-spacing: 0px;
+              color: #cccccc;
+              opacity: 0.44;
             }
           }
         }
-        .mac-shipping{
+        .mac-shipping {
           font-family: poppins;
           font-size: 14px;
           letter-spacing: 0px;
-          color: #FF3B30;
+          color: #ff3b30;
           opacity: 1;
         }
       }
@@ -812,13 +1005,12 @@
         height: 420px;
       }
     }
-    }
-
+  }
 }
 
 // Watch CSS
-.watch{
-  .container{
+.watch {
+  .container {
     margin: 0 100px !important;
     width: calc(100vw - 200px) !important;
     padding: 0 !important;
@@ -826,8 +1018,8 @@
       padding: 30px;
       padding-left: 50px;
       width: 100%;
-      background: transparent linear-gradient(90deg, #f2f2f2 0%, #ffffff00 100%) 0%
-        0% no-repeat padding-box;
+      background: transparent linear-gradient(90deg, #f2f2f2 0%, #ffffff00 100%)
+        0% 0% no-repeat padding-box;
       opacity: 1;
       .watch-title {
         font-family: poppins;
@@ -851,18 +1043,18 @@
         letter-spacing: 0px;
         color: #999999;
         opacity: 1;
-        p{
+        p {
           width: 450px;
         }
       }
-      .watch-shipping{
+      .watch-shipping {
         font-family: poppins;
         font-size: 14px;
         letter-spacing: 0px;
-        color: #FF3B30;
+        color: #ff3b30;
         opacity: 1;
       }
-      .background-logo{
+      .background-logo {
         position: absolute;
         top: 10%;
         left: 80%;
@@ -898,14 +1090,14 @@
         opacity: 1;
       }
     }
-    .switch-part{
+    .switch-part {
       padding: 15px;
       margin-top: 25px;
       display: flex;
       justify-content: center;
-      .toggle-btns{
+      .toggle-btns {
         display: flex;
-        .white-circle-container{
+        .white-circle-container {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -914,14 +1106,14 @@
           border-radius: 50%;
           cursor: pointer;
           border: 1px rgba(214, 218, 211, 0.575) solid;
-          .white-circle{
+          .white-circle {
             height: 27px;
             width: 27px;
             border-radius: 50%;
             border: 1px black solid;
           }
         }
-        .black-circle-container{
+        .black-circle-container {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -931,7 +1123,7 @@
           border-radius: 50%;
           cursor: pointer;
           border: 1px rgba(214, 218, 211, 0.575) solid;
-          .black-circle{
+          .black-circle {
             height: 27px;
             width: 27px;
             border-radius: 50%;
@@ -948,9 +1140,9 @@
     }
   }
   .fade-in {
-    animation: fade-in 2s; /* other keywords like "infinite alternate" can be useful here */
+    animation: fade-in 0.5s; /* other keywords like "infinite alternate" can be useful here */
   }
-  
+
   @keyframes fade-in {
     /* You could think of as "step 1" */
     0% {
@@ -959,109 +1151,106 @@
     /* You could think of as "step 2" */
     100% {
       opacity: 1;
-
     }
   }
 
   .fade-out {
-    animation: fade-out 2s; /* other keywords like "infinite alternate" can be useful here */
+    animation: fade-out 0.5s; /* other keywords like "infinite alternate" can be useful here */
   }
-  
+
   @keyframes fade-out {
     0% {
       opacity: 0;
     }
     100% {
       opacity: 1;
-
     }
   }
 }
 
 // Counter Animation
-.holder{
-  display:inline-block;
-  height:100px;
-  width:auto;
-  text-align:center;
-  overflow:hidden;
-  background:transparent;
-  color:#000;
-  padding:0;
+.holder {
+  display: inline-block;
+  height: 100px;
+  width: auto;
+  text-align: center;
+  overflow: hidden;
+  background: transparent;
+  color: #000;
+  padding: 0;
 }
-.digit1{
-  line-height:100px;
-  margin:0 8px 0 8px;
-  font-size:70px;
-  font-family:poppins;
+.digit1 {
+  line-height: 100px;
+  margin: 0 8px 0 8px;
+  font-size: 70px;
+  font-family: poppins;
   font-weight: 600;
 }
-.digit2{
-  line-height:100px;
-  margin:-900px 8px 0 8px;
-  font-size:70px;
-  font-family:poppins;
+.digit2 {
+  line-height: 100px;
+  margin: -900px 8px 0 8px;
+  font-size: 70px;
+  font-family: poppins;
   font-weight: 600;
 }
-.digit3{
-  line-height:100px;
-  margin:-900px 8px 0 8px;
-  font-size:70px;
-  font-family:poppins;
+.digit3 {
+  line-height: 100px;
+  margin: -900px 8px 0 8px;
+  font-size: 70px;
+  font-family: poppins;
   font-weight: 600;
 }
-.digit4{
-  line-height:100px;
-  margin:0 8px 0 8px;
-  font-size:70px;
-  font-family:poppins;
+.digit4 {
+  line-height: 100px;
+  margin: 0 8px 0 8px;
+  font-size: 70px;
+  font-family: poppins;
   font-weight: 600;
 }
-.digit-animate1{
-  line-height:100px;
-  margin:-200px 8px 0 8px;
-  font-size:70px;
-  font-family:poppins;
+.digit-animate1 {
+  line-height: 100px;
+  margin: -200px 8px 0 8px;
+  font-size: 70px;
+  font-family: poppins;
   font-weight: 600;
-  -webkit-transition:margin-top 2s ease;
-  -moz-transition:margin-top 2s ease;
-  -o-transition:margin-top 2s ease;
-  transition:margin-top 2s ease;
+  -webkit-transition: margin-top 2s ease;
+  -moz-transition: margin-top 2s ease;
+  -o-transition: margin-top 2s ease;
+  transition: margin-top 2s ease;
 }
-.digit-animate2{
-  line-height:100px;
-  margin:0 8px 0 8px;
-  font-size:70px;
-  font-family:poppins;
+.digit-animate2 {
+  line-height: 100px;
+  margin: 0 8px 0 8px;
+  font-size: 70px;
+  font-family: poppins;
   font-weight: 600;
-  -webkit-transition:margin-top 2s ease;
-  -moz-transition:margin-top 2s ease;
-  -o-transition:margin-top 2s ease;
-  transition:margin-top 2s ease;
+  -webkit-transition: margin-top 2s ease;
+  -moz-transition: margin-top 2s ease;
+  -o-transition: margin-top 2s ease;
+  transition: margin-top 2s ease;
 }
-.digit-animate3{
-  line-height:100px;
-  margin:-100px 8px 0 8px;
-  font-size:70px;
-  font-family:poppins;
+.digit-animate3 {
+  line-height: 100px;
+  margin: -100px 8px 0 8px;
+  font-size: 70px;
+  font-family: poppins;
   font-weight: 600;
-  -webkit-transition:margin-top 2s ease;
-  -moz-transition:margin-top 2s ease;
-  -o-transition:margin-top 2s ease;
-  transition:margin-top 2s ease;
+  -webkit-transition: margin-top 2s ease;
+  -moz-transition: margin-top 2s ease;
+  -o-transition: margin-top 2s ease;
+  transition: margin-top 2s ease;
 }
-.digit-animate4{
-  line-height:100px;
-  margin:-900px 8px 0 8px;
-  font-size:70px;
-  font-family:poppins;
+.digit-animate4 {
+  line-height: 100px;
+  margin: -900px 8px 0 8px;
+  font-size: 70px;
+  font-family: poppins;
   font-weight: 600;
-  -webkit-transition:margin-top 2s ease;
-  -moz-transition:margin-top 2s ease;
-  -o-transition:margin-top 2s ease;
-  transition:margin-top 2s ease;
+  -webkit-transition: margin-top 2s ease;
+  -moz-transition: margin-top 2s ease;
+  -o-transition: margin-top 2s ease;
+  transition: margin-top 2s ease;
 }
-
 
 // Animation Names
 @keyframes fade-in {
@@ -1072,7 +1261,6 @@
   /* You could think of as "step 2" */
   100% {
     opacity: 1;
-
   }
 }
 
@@ -1084,260 +1272,247 @@
   /* You could think of as "step 2" */
   100% {
     opacity: 1;
-
   }
 }
 
 @keyframes come-down {
   /* You could think of as "step 1" */
   0% {
-    transform:translateY(-15%);
+    transform: translateY(-15%);
   }
   /* You could think of as "step 2" */
   100% {
-    transform:translateY(0%);
+    transform: translateY(0%);
   }
 }
 
 @keyframes come-up {
   /* You could think of as "step 1" */
   0% {
-    transform:Scale(0.95);
+    transform: Scale(0.95);
   }
   /* You could think of as "step 2" */
   100% {
-    transform:Scale(1);
+    transform: Scale(1);
   }
 }
 
-
-
-
-
-
-
-
-
-
-@media(max-width: 1550px){
-  .watch{
-    .watch-title-sub{
+@media (max-width: 1550px) {
+  .watch {
+    .watch-title-sub {
       font-size: 60px !important;
     }
   }
 }
 
-@media(max-width: 1450px){
+@media (max-width: 1450px) {
   .iphone-title-sub,
   .watch-title-sub,
-  .mac-title-sub{
+  .mac-title-sub {
     font-size: 55px !important;
   }
-  .tech-compute{
+  .tech-compute {
     font-size: 40px !important;
   }
-  .iphone{
-    .bottom-part{
+  .iphone {
+    .bottom-part {
       margin-top: 15px !important;
     }
-    .switch-part{
+    .switch-part {
       margin-top: 25px !important;
     }
   }
   .mac-image {
-    height: 290px  !important;
+    height: 290px !important;
   }
 }
 
-@media(max-width: 1200px){
+@media (max-width: 1200px) {
   .iphone-title-sub,
-  .watch-title-sub{
+  .watch-title-sub {
     font-size: 80px !important;
   }
   .mac-image {
     width: 70% !important;
-    height: 280px  !important;
+    height: 280px !important;
   }
-  .iphone{
-    .bottom-part{
+  .iphone {
+    .bottom-part {
       margin-top: 120px !important;
     }
   }
 }
 
-@media(max-width: 915px){
+@media (max-width: 915px) {
   .iphone-title-sub,
-  .watch-title-sub{
+  .watch-title-sub {
     font-size: 60px !important;
   }
-  .nav-link{
+  .nav-link {
     margin: 0px 10px !important;
   }
 }
 
-@media(max-width: 850px){
-  .iphone{
-    .bottom-part{
+@media (max-width: 850px) {
+  .iphone {
+    .bottom-part {
       display: block !important;
     }
-    .switch-part{
+    .switch-part {
       padding-left: 50px;
     }
   }
   .mac-image {
     width: 100% !important;
-    height: 280px  !important;
+    height: 280px !important;
   }
-  .watch{
-    .watch-title-sub{
+  .watch {
+    .watch-title-sub {
       font-size: 45px !important;
     }
   }
-
 }
 
 @media only screen and (max-width: 800px) {
-  .nav-links{
+  .nav-links {
     display: flex !important;
-    width:  100vw !important;
+    width: 100vw !important;
     justify-content: space-evenly;
-    .nav-link{
-      .nav-text{
+    .nav-link {
+      .nav-text {
         display: none !important;
       }
-      .nav-icon{
+      .nav-icon {
         display: block !important;
       }
       .sign-out-btn {
         margin-left: 0 !important;
       }
-      .svg{
-      position: relative !important;
-      margin: 0 !important;
-      padding: 0 !important;
+      .svg {
+        position: relative !important;
+        margin: 0 !important;
+        padding: 0 !important;
       }
     }
   }
 }
 
-@media(max-width: 680px){
+@media (max-width: 680px) {
   .iphone-title-sub,
   .watch-title-sub,
-  .mac-title-sub{
+  .mac-title-sub {
     font-size: 40px !important;
   }
-  .mac-desc{
+  .mac-desc {
     text-align: center;
   }
   .mac-image {
-    height: 180px  !important;
+    height: 180px !important;
   }
-  .right-desc{
+  .right-desc {
     margin-left: 0px !important;
   }
-  .tech-compute{
+  .tech-compute {
     font-size: 35px !important;
   }
-  .mac-title-part{
+  .mac-title-part {
     padding-left: 30px !important;
   }
-  .pre-home-page{
+  .pre-home-page {
     margin-left: 50px !important;
     margin-right: 50px !important;
   }
-  .pre-apple{
+  .pre-apple {
     width: 280px !important;
     height: 273px !important;
   }
 }
 
 @media only screen and (max-width: 650px) {
-  .nav-links{
-    .nav-link{
-      .nav-text{
+  .nav-links {
+    margin-left: 100px !important;
+    .nav-link {
+      .nav-text {
         display: none !important;
       }
-      .nav-icon{
+      .nav-icon {
         display: block !important;
       }
     }
   }
-  .vertical-icons{
+  .vertical-icons {
     display: none !important;
   }
 }
 
-@media(max-width: 520px){
-  .login-card{
+@media (max-width: 520px) {
+  .login-card {
     width: 320px;
     height: 400px;
   }
-  .signup-card{
+  .signup-card {
     width: 320px;
     height: 440px;
   }
   .signing-in,
-  .signing-up{
+  .signing-up {
     width: 100% !important;
   }
-  .pre-home-page{
+  .pre-home-page {
     margin-left: 0px !important;
     margin-right: 0px !important;
   }
   .iphone .container,
   .mac .container,
-  .watch .container{
+  .watch .container {
     width: 100% !important;
     margin: 0 !important;
   }
-  .background-logo{
+  .background-logo {
     position: absolute;
     top: 10% !important;
     left: 30% !important;
   }
   .mac-image {
-    height: 250px  !important;
+    height: 250px !important;
   }
-  .mac-title-part{
+  .mac-title-part {
     padding-left: 50px !important;
   }
-  .watch{
-    .watch-title{
+  .watch {
+    .watch-title {
       font-size: 32px !important;
     }
-    .watch-title-sub{
+    .watch-title-sub {
       font-size: 35px !important;
     }
-    .watch-title-description{
+    .watch-title-description {
       font-size: 20px !important;
-      p{
+      p {
         width: 300px !important;
       }
     }
-    .watch-image{
+    .watch-image {
       width: 395px !important;
       height: 360px !important;
     }
   }
-  .iphone{
-    .iphone-title-description{
-      p{
+  .iphone {
+    .iphone-title-description {
+      p {
         width: 300px !important;
       }
     }
-    .bottom-part{
+    .bottom-part {
       text-align: center !important;
       margin-top: 150px !important;
       margin-bottom: 50px !important;
     }
-    .switch-part{
+    .switch-part {
       padding-right: 0 !important;
     }
-    .toggle-line{
+    .toggle-line {
       margin-left: 43px !important;
     }
   }
 }
-
-
-
