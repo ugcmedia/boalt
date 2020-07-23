@@ -19,22 +19,8 @@ class Iphone extends React.Component {
       slideValue: 0,
     };
   }
-  handle = () => {
-    this.setState({ clicked: true });
-    setTimeout(() => {
-      this.setState({ front: !this.state.front });
-      setTimeout(() => {
-        this.setState({ clicked: false });
-      }, 900);
-    }, 500);
-  };
-  ok = () => {
-    console.log("hi");
-  };
-  ook = () => {
-    console.log("bye");
-  };
 
+  // to toggle iphone with slider
   handleChange = (s) => {
     this.setState(
       {
@@ -50,7 +36,7 @@ class Iphone extends React.Component {
     );
     console.log(s);
   };
-
+// to toggle iphone with thumbnails
   clickedFront = (a = null) => {
     this.setState({ clicked: true });
     setTimeout(() => {
@@ -70,6 +56,7 @@ class Iphone extends React.Component {
     }, 500);
   };
 
+  // section responsible for hadling endpoint JSON data
   componentDidMount(){
     axios.get("https://boalt-interview.herokuapp.com/api/shipping-dates", {
       headers: {

@@ -16,7 +16,7 @@ class PreHome extends React.Component {
     }, 500);
   }
   
-
+// Animation Funtion
   render() {
     let digit_class1 = this.state.animate ? "digit-animate1" : "digit1";
     let digit_class2 = this.state.animate ? "digit-animate2" : "digit2";
@@ -35,6 +35,7 @@ class PreHome extends React.Component {
 </svg>
         </div>
         
+        {/* Casino Number Effect */}
           <NavLink to="/home">
         <div className="pre-home-page">
           <img src={apple} alt="apple" className="pre-apple" />

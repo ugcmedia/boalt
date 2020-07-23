@@ -5,6 +5,8 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 
+// <App /> Where everything is mounted
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

@@ -1,13 +1,16 @@
 import React from "react";
+//  Where we import the router
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
 } from "react-router-dom";
+//  Where we import SASS
 import "./App.scss";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
+//  Where we import counter animation
 import PreHome from "./components/PreHome";
 import Home from "./components/Home";
 import Iphone from "./components/Iphone";
@@ -15,11 +18,13 @@ import Macbook from "./components/Macbook";
 import Watch from "./components/Watch";
 import Navbar from "./components/Navbar";
 
+//  funtion to Protect non authenticated routes and redirect to login page if unauthorized and to maintain session
 function isAuth() {
   if (!localStorage.getItem("apple-token")) return false;
   else return true;
 }
 
+//  funtion to encapsulate the entire APP.
 function App() {
   return (
     <div className="app">

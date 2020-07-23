@@ -54,12 +54,11 @@ class SignInForm extends Component {
       this.setState({ signin: "Login to Continue!!" });
     }
   }
-
+// Sign-in Animation section
   render() {
     return this.state.loader ? (
       <div className="login-card">
         <div className="signing-in" style={{ position: "relative" }}>
-          {/* <i className="fa fa-spinner fa-spin loader"></i> */}
           <div className="mac-loader-div">
             <MacSvg />
           </div>
